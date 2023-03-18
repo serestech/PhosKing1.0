@@ -1,0 +1,13 @@
+# Data
+*.tsv
+*.csv
+*.fasta
+*.pickle
+*.json
+*.tar.gz
+*.clstr
+*_dump.txt
+
+# Python shit
+*__pycache__*
+*.pyc
