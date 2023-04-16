@@ -3,7 +3,7 @@ import os.path as path
 import sys
 import re
 
-main_data_dir = path.dirname(__file__)
+main_data_dir = '../database_dumps'
 
 species_mapping = {
     'Canis familiaris':'Canis lupus familiaris',

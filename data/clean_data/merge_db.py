@@ -1,8 +1,5 @@
-import os
+import os, sys, re
 import os.path as path
-import sys
-import re
-
 
 # Read sequences from fasta files
 # Open any directory that has db_sequences.fasta and db_metadata.tsv
@@ -41,7 +38,7 @@ def load_fastas(main_data_dir):
 
 # For sequences with the same ID but not the same sequence, we keep the entries
 #   that agree with the topmost source of the following improvised trustness ranking
-def merge_sequences(seqs, blacklist, seq_prio):
+def merge_sequences(seqs, blacklist={}, seq_prio={}):
     merged_seqs = {}
     for ID in seqs.keys():
         if len(seqs[ID]) > 1:
@@ -50,9 +47,8 @@ def merge_sequences(seqs, blacklist, seq_prio):
             for source in seqs[ID].keys():
                 if seqs[ID][source] != ref:
                     blacklist.add((ID, source))
-        else:
-            seq = list(seqs[ID].values()).pop()
-            merged_seqs[ID] = seq
+        else:   
+            merged_seqs[ID] = list(seqs[ID].values()).pop()
 
     return merged_seqs
 
@@ -61,7 +57,7 @@ print('Reading features files...')
 # Read phosphorylation entries from features tsv files
 # Open same directories of previous fasta files
 # Store entries as {source : {ID : [[pos, aa, spec, kin_spec, source], ...] , ...}, ...}
-def load_metadata(main_data_dir, sources, merged_seqs, blacklist):
+def load_metadata(main_data_dir, sources, merged_seqs, blacklist, spec_mapping={}, spec_prio={}):
     feats = {}
     metadata = {}
     for source in sources:
@@ -72,13 +68,14 @@ def load_metadata(main_data_dir, sources, merged_seqs, blacklist):
                     try:
                         ID, pos, aa, kinases, spec, kin_spec, _ = line.strip().split('\t') # ID, pos, aa, kinases, species, source
                     except ValueError:
-                        raise ValueError(f'Error while parsing line "{line[:-1]}" in file "{feat_filename}"')
+                        print(f'Error while parsing line "{(line.strip())}" in file "{feat_filename}"')
+                        sys.exit(1)
 
                     if (ID, source) not in blacklist and ID in merged_seqs and merged_seqs[ID][int(pos)-1] == aa:
                         if not feats.get(ID):
                             feats[ID] = {}
                         if not metadata.get(ID):
-                            metadata[ID] = ['NA', 0, 0, set()]     # Species, n_entries, n_entries_w_kinase, sources
+                            metadata[ID] = ['NA', 0, 0, len(merged_seqs[ID]), set()]     # Species, n_entries, n_entries_w_kinase, sources
 
                         if kinases == 'NA':
                             kin_set = set()
@@ -105,21 +102,22 @@ def load_metadata(main_data_dir, sources, merged_seqs, blacklist):
                             metadata[ID][1] += 1
                             if kin_set:
                                 metadata[ID][2] += 1
-                            metadata[ID][3].add(source)
+                            metadata[ID][4].add(source)
 
     return feats, metadata
 
 
-def write_fasta(seqs, out_name):
+def write_fasta(seqs, feats, out_name):
     with open(out_name, 'w') as fasta:
         for ID, seq in seqs.items():
-            fasta.write(f'> {ID}\n')
-            fasta.write(f'{seq}\n')
+            if ID in feats.keys():
+                fasta.write(f'>{ID}\n')
+                fasta.write(f'{seq}\n')
 
 
 def write_features(feats, metadata, out_name):
     with open(out_name, 'w') as tsv:
-        tsv.write('#UniProt-ID\tposition\tresidue\tkinases\tspecies\tkinase-species\tsources\n')
+        tsv.write('#UniProt-ID\tposition\tresidue\tkinases\tkinase-species\tsources\n')
         for ID in feats:
             for pos, (aa, kins, kin_spec, sources) in feats[ID].items():
                 if kins:
@@ -135,10 +133,10 @@ def write_features(feats, metadata, out_name):
 
 def write_metadata(metadata, out_name):
     with open(out_name, 'w') as tsv:
-        tsv.write('#UniProt-ID\tspecies\tn_entries\tn_entries_with_kinase\tsources\n')
-        for ID, (spec, n, n_kin, sources) in metadata.items():
+        tsv.write('#UniProt-ID\tspecies\tn_entries\tn_entries_with_kinase\tprot_length\tsources\n')
+        for ID, (spec, n, n_kin, length, sources) in metadata.items():
             sources_str = ','.join(sources)
-            entry = [ID, spec, str(n), str(n_kin), sources_str]
+            entry = [ID, spec, str(n), str(n_kin), str(length), sources_str]
             line = '\t'.join(entry) + '\n'
             tsv.write(line)
 
@@ -146,13 +144,13 @@ def write_metadata(metadata, out_name):
 
 
 if __name__ == '__main__':
-    main_data_dir = path.dirname(__file__)
+    main_data_dir = '../database_dumps'
     print('Looking for databases and loading fasta files...')
     seqs, sources, blacklist = load_fastas(main_data_dir)
     print('Found databases: {}'.format(', '.join(sources)))
 
     print('Merging database sequences...')
-    seq_prio = {'UniProt':8, 'Phosphosite':6, 'PhosphoELM':4, 'dbPAF':3, 'PhosPhAt':1, 'EPSD':0}
+    seq_prio = {'UniProt':8, 'Phosphosite':6, 'PhosphoELM':4, 'dbPAF':3, 'PhosPhAt':2, 'dbPSP':1, 'EPSD':0}
     merged_seqs = merge_sequences(seqs, blacklist, seq_prio)
     
     print('Loading metadata files...')
@@ -160,12 +158,12 @@ if __name__ == '__main__':
         'Canis familiaris':'Canis lupus familiaris',
         'Torpedo californica':'Tetronarce californica'
         }
-    spec_prio = {'UniProt':8, 'Phosphosite':1, 'PhosphoELM':4, 'dbPAF':3, 'PhosPhAt':2, 'EPSD':0}
-    feats, metadata = load_metadata(main_data_dir, sources, merged_seqs, blacklist)
+    spec_prio = {'UniProt':8, 'Phosphosite':1, 'PhosphoELM':4, 'dbPAF':3, 'PhosPhAt':2, 'dbPSP':1, 'EPSD':0}
+    feats, metadata = load_metadata(main_data_dir, sources, merged_seqs, blacklist, spec_mapping, spec_prio)
 
     print('Writing merged files...')
-    write_fasta(merged_seqs, 'temp_seqs.fasta')
-    write_features(feats, metadata, 'temp_feats.tsv')
-    write_metadata(metadata, 'temp_metadata.tsv')
+    write_fasta(merged_seqs, feats, '../tmp/temp_sequences.fasta')
+    write_features(feats, metadata, '../tmp/temp_features.tsv')
+    write_metadata(metadata, '../tmp/temp_metadata.tsv')
 
     print('Databases merged!')

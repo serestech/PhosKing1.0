@@ -66,7 +66,7 @@ if __name__ == '__main__':
     UNIPROT_API_URL = 'https://rest.uniprot.org/uniprotkb/search'
 
     # Search query for UniProt
-    UNIPROT_QUERY = 'reviewed:true AND keyword:KW-0597'  # Only manually annotated (> 500.000 proteins)
+    UNIPROT_QUERY = 'reviewed:true AND keyword:KW-0597'  # Only manually annotated (> 500.000 proteins) and phosphorylated
 
     # Fields to retrieve from UniProt
     RETRIEVE_FIELDS = ['accession', 'protein_name', 'organism_name', 'lineage',

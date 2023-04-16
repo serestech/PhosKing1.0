@@ -63,7 +63,7 @@ with open('db_metadata.tsv', 'w') as outfile_metadata:
 print("Writing FASTA sequences...")
 with open('db_sequences.fasta', 'w') as outfile_fasta:
     for id, sequence in sequences.items():
-        outfile_fasta.write(f'> {id}\n{sequence}\n')
+        outfile_fasta.write(f'>{id}\n{sequence}\n')
 
 print(f'{len(set(all_kinases))} kinases')
 print(f'{len(metadata_entries)} total entries')

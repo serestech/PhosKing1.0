@@ -15,6 +15,8 @@ def filter_file(in_name, out_name, seqs):
             ID = line.strip().split('\t')[0]
             if ID in seqs:
                 outfile.write(line)
+        else:
+            outfile.write(line)
             
     infile.close()
     outfile.close()

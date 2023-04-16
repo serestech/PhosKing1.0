@@ -44,6 +44,10 @@ for entry in table[1:]:
         nulls += 1
         continue
     
+    if sequence.endswith('*'):
+        seq_blacklist.add(uniprot_acc)
+        continue
+        
     for aa in pepposprot.split('_'):
         code, position = aa[0], int(aa[1:])
         
@@ -153,7 +157,6 @@ for entry in metadata_entries:
     
     filtered_sequences[uniprot_acc] = sequence
 
-
 if '--download_uniprot' in argv:
     print('Writing sequences list')
     with open('seq_lsit.txt', 'w') as seqlist_file:
@@ -176,6 +179,8 @@ with open('db_metadata.tsv', 'w') as outfile_metadata:
 print("Writing FASTA sequences...")
 with open('db_sequences.fasta', 'w') as outfile_fasta:
     for id, sequence in phosphat_sequences.items():
-        outfile_fasta.write(f'> {id}\n{sequence}\n')
+        if id in seq_blacklist:
+            continue
+        outfile_fasta.write(f'>{id}\n{sequence}\n')
 
 print(f'Wrote {len(filtered_entries)} entries')

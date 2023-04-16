@@ -1,6 +1,6 @@
 from typing import Union
 
-def read_fasta(file: str, format: type = list) -> Union[list[tuple], dict]:
+def read_fasta(file: str, format: type = list):
     '''
     Reads a fasta file into a list of tuples ready for ESM or, optionally, a dict.
     '''

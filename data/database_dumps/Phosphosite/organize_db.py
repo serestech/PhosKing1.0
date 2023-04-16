@@ -83,7 +83,7 @@ with open('db_sequences.fasta', 'w') as out_fasta:
         if seq_id not in sequences:
             skipped.append(seq_id)
             continue
-        out_fasta.write(f'> {seq_id}\n{seq}\n')
+        out_fasta.write(f'>{seq_id}\n{seq}\n')
         added.add(seq_id)
 
 print(f'Skipped {len(skipped)} sequences (not in metadata tables)')

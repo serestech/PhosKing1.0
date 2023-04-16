@@ -81,7 +81,7 @@ for i, filename in enumerate(json_files):
             sequence=protein_dict['sequence']['value']
             
             # Write fasta with UniProt accession number and sequence
-            fasta_entry = '> {header}\n{seq}\n'.format(header=uniprot_accession, seq=sequence)
+            fasta_entry = '>{header}\n{seq}\n'.format(header=uniprot_accession, seq=sequence)
             output_fasta.write(fasta_entry)
 
             # Create list with feature lines belonging to one sequence
