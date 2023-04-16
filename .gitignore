@@ -8,6 +8,7 @@
 *.clstr
 *_dump.txt
 data/database_dumps/mmseq_tmp/
+*.pth
 
 # Python shit
 *__pycache__*
