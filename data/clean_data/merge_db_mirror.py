@@ -67,7 +67,6 @@ def merge_sequences(seqs, blacklist={}, seq_prio={}):
     return merged_seqs, seq_mirror
 
 
-print('Reading features files...')
 # Read phosphorylation entries from features tsv files
 # Open same directories of previous fasta files
 # Store entries as {source : {ID : [[pos, aa, spec, kin_spec, source], ...] , ...}, ...}
@@ -128,6 +127,7 @@ def load_metadata(main_data_dir, sources, merged_seqs, blacklist, spec_mapping={
 
 
 def write_fasta(seqs, feats, out_name):
+    print(f'Saving FASTA file at {os.path.abspath(out_name)}')
     with open(out_name, 'w') as fasta:
         for ID, seq in seqs.items():
             if ID in feats.keys():
@@ -136,6 +136,7 @@ def write_fasta(seqs, feats, out_name):
 
 
 def write_features(feats, metadata, out_name):
+    print(f'Saving features file at {os.path.abspath(out_name)}')
     with open(out_name, 'w') as tsv:
         tsv.write('#UniProt-ID\tposition\tresidue\tkinases\tspecies\tkinase-species\tsources\n')
         for ID in feats:
@@ -150,6 +151,7 @@ def write_features(feats, metadata, out_name):
 
 
 def write_metadata(metadata, out_name):
+    print(f'Saving metadata file at {os.path.abspath(out_name)}')
     with open(out_name, 'w') as tsv:
         tsv.write('#UniProt-ID\tspecies\tn_entries\tn_entries_with_kinase\tprot_length\tsources\tmirrors\n')
         for ID, (spec, n, n_kin, length, sources, m_IDs) in metadata.items():
@@ -159,13 +161,13 @@ def write_metadata(metadata, out_name):
             tsv.write('\t'.join(entry) + '\n')
 
 
-
-
 if __name__ == '__main__':
-    main_data_dir = path.abspath(path.dirname(__file__))
+    main_data_dir = path.abspath(path.dirname(__file__) + '/../database_dumps')
     print('Looking for databases and loading fasta files...')
     seqs, sources, blacklist = load_fastas(main_data_dir)
-    print('Found databases: {}'.format(', '.join(sources)))
+    print(f'Found {len(sources)} databases: {", ".join(sources)}')
+    if len(sources) == 0:
+        raise RuntimeError
 
     print('Merging database sequences...')
     seq_prio = {'UniProt':8, 'Phosphosite':6, 'PhosphoELM':4, 'dbPAF':3, 'PhosPhAt':1, 'EPSD':0}
@@ -179,9 +181,11 @@ if __name__ == '__main__':
     spec_prio = {'UniProt':8, 'Phosphosite':1, 'PhosphoELM':4, 'dbPAF':3, 'PhosPhAt':2, 'EPSD':0}
     feats, metadata = load_metadata(main_data_dir, sources, merged_seqs, blacklist, spec_mapping, spec_prio, seq_mirror)
 
+    here = path.dirname(path.abspath(__file__))
+
     print('Writing merged files...')
-    write_fasta(merged_seqs, feats, '../tmp/temp_sequences.fasta')
-    write_features(feats, metadata, '../tmp/temp_features.tsv')
-    write_metadata(metadata, '../tmp/temp_metadata.tsv')
+    write_fasta(merged_seqs, feats, here + '/sequences.fasta')
+    write_features(feats, metadata, here + '/features.tsv')
+    write_metadata(metadata, here + '/metadata.tsv')
 
     print('Databases merged!')

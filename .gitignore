@@ -13,3 +13,6 @@ data/database_dumps/mmseq_tmp/
 # Python shit
 *__pycache__*
 *.pyc
+
+# tmp
+data/tmp

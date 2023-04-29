@@ -48,6 +48,7 @@ def compute_embeddings(seq_data, params, output_folder, pickle_prefix='embedding
     n_pick = 1
     n_moving = 0
     representations = {}
+    n_seqs = len(seq_data)
     with torch.no_grad():
         for i, tup in enumerate(seq_data):
             ID, seq = tup
@@ -59,7 +60,7 @@ def compute_embeddings(seq_data, params, output_folder, pickle_prefix='embedding
                 n_pick += 1
             
             if verbose and i % 10 == 0:
-                print(f'Processed sequences: {i}; Written files: {n_pick-1}; Framed sequences: {n_moving}', end='\r')
+                print(f'Processed sequences: {i} ({(i + 1)/n_seqs * 100:.2f}%); Written files: {n_pick-1}; Framed sequences: {n_moving}', end='\r')
 
             _, _, tokens = batch_converter([tup])
             tokens = tokens.to(device)
@@ -97,7 +98,7 @@ def compute_embeddings(seq_data, params, output_folder, pickle_prefix='embedding
             with open(path.join(output_folder, f'{pickle_prefix}{n_pick}.pickle'), 'wb') as f:
                 pickle.dump(representations, f)
 
-    if verbose: print(f'Processed sequences: {i}; Written files: {n_pick}; Framed sequences: {n_moving}')
+    if verbose: print(f'Processed sequences: {i}  Written files: {n_pick}  Framed sequences: {n_moving}')
 
 
 
@@ -105,28 +106,30 @@ if __name__ == '__main__':
     description = 'Computes embeddings from sequences in a fasta file and store them in pickles'
     parser = argparse.ArgumentParser(description=description, add_help=True)
 
+    # python3 compute_embeddings.py -i /zhome/52/c/174062/s220260/PhosKing1.0/data/homology_reduced/cd-hit_out_29-04.fasta -o /zhome/52/c/174062/s220260/PhosKing1.0/data/embeddings/embeddings_1280
+
     parser.add_argument('-i', '--input', required=True,
                         action='store', dest='fasta_file_name', default=None,
                         help='Input file in fasta format')
-    parser.add_argument('-p', '--params', required=True,
+    parser.add_argument('-p', '--params',
                         action='store', dest='params', choices=['320', '1280'],
-                        help='Parameters of the model to use, determining the model. \
-                        Available models are 320, 1280')
+                        help='Embeddings size (320, 1280)',
+                        default='1280')
     parser.add_argument('-m', '--max_pickle',
                         action='store', dest='max_pickle', type=int, default=1000,
                         help='Maximum number of sequence embeddings per pickle file')
-    parser.add_argument('-f', '--output_folder',
+    parser.add_argument('-o', '--output_folder',
                         action='store', dest='output_folder', default=None,
                         help='Directory to place the output pickles, created if absent, \
                         default is "embeddings_<params>" in the same directory of this script')
-    parser.add_argument('-o', '--output_prefix',
+    parser.add_argument('-pf', '--output_prefix',
                         action='store', dest='pickle_prefix', default='embeddings_',
                         help='Prefix for the output pickles, default is "embeddings_"')
     parser.add_argument('-F', '--frame_len',
                         action='store', dest='frame_len', type=int, default=1024,
                         help='Select frame length from which the protein embeddings will be calculated with windows if lacking GPU memory')
     parser.add_argument('-of', '--offset',
-                        action='store', dest='offset', type=int, default=50,
+                        action='store', dest='offset', type=int, default=150,
                         help='Select offset to concatenate embeddings for sequences biggers than frame_len')
     parser.add_argument('-r', '--remove_files',
                         action='store_true', dest='remove_files', default=False,
@@ -165,8 +168,8 @@ if __name__ == '__main__':
     # Read fasta file
     print('Reading sequences file...',  end=' ')
     seq_data = load_fasta(fasta_file_name)
-    print(f'Found {len(seq_data)} sequences!')
+    print(f'Found {len(seq_data)} sequences')
 
     # Extract per-sequence per-residue representations
     compute_embeddings(seq_data, params, output_folder, pickle_prefix, max_pickle, frame_len, offset)
-    print('Finished computing embeddings!')
+    print('Finished computing embeddings')
