@@ -1,13 +1,11 @@
-import os
+import os, sys
 import os.path as path
-import sys
 import time as t
-from random import sample, randint
+from random import sample, shuffle, randint
 import pickle
 import torch
 from torch.utils.data import Dataset
 from torch.nn.functional import pad
-import esm
 sys.path.append(path.abspath(path.join(path.dirname(__file__), '..', 'utils')))
 from utils import read_fasta, phosphorylable_aas
 
@@ -16,16 +14,15 @@ class ESM_Embeddings(Dataset):
     '''
     PyTorch Dataset for phosphorylations. 
     '''
-
     def __init__(self, fasta: str, features: str, embeddings_dir: str, phos_fract: float=0.5, 
-                 aa_window:int=0, add_dim:bool=False, flatten_window: bool = False, mode:str='phospho', 
-                 mappings_dir:str=None, verbose=False, small_data=False):
+                 aa_window: int=0, add_dim: bool=False, flatten_window: bool=False, mode:str='phospho', 
+                 verbose=True, small_data=False):
         self.start = t.perf_counter()
         self.verbose = verbose
-        self._log('Initializing...')
+        self._log('Initializing dataset class')
         
         if mode not in ('phospho', 'kinase'):
-            raise NotImplementedError(f'Mode {mode} not recognized')
+            raise NotImplementedError(f'Mode "{mode}" not recognized')
         else:
             self.mode = mode
         
@@ -37,7 +34,7 @@ class ESM_Embeddings(Dataset):
         self.add_dim = add_dim
 
         self.fasta_file_name = path.abspath(fasta)
-        assert path.isfile(self.fasta_file_name), f"Couldn't find fasta file {fasta}"
+        assert path.isfile(self.fasta_file_name), f"Couldn't find FASTA file {fasta}"
         self.features_file_name = path.abspath(features)
         assert path.isfile(self.features_file_name), f"Couldn't find features file {self.features_file_name}"
         self.pickles_dir = path.abspath(embeddings_dir)
@@ -59,8 +56,9 @@ class ESM_Embeddings(Dataset):
         self._log(f'Discarded {before - len(self.fasta)} sequences that were not in the pickles')
         
         if self.mode == 'kinase':
-            self.mapping = {'AMPK': 0, 'ATM': 1, 'Abl': 2, 'Akt1': 3, 'AurB': 4, 'CAMK2': 5, 'CDK1': 6, 'CDK2': 7, 'CDK5': 8, 'CKI': 9, 'CKII': 10, 'DNAPK': 11, 'EGFR': 12, 'ERK1': 13, 'ERK2': 14, 'Fyn': 15, 'GSK3': 16, 'INSR': 17, 'JNK1': 18, 'MAPK': 19, 'P38MAPK': 20, 'PKA': 21, 'PKB': 22, 'PKC': 23, 'PKG': 24, 'PLK1': 25, 'RSK': 26, 'SRC': 27, 'mTOR': 28}
-            self.reverse_mapping = {i : kinase for kinase, i in self.mapping.items()}
+            from kinase_mapping import kinase_mapping, kinase_mapping_reverse
+            self.mapping = kinase_mapping
+            self.reverse_mapping = kinase_mapping_reverse
         
         self.data = self._load_metadata(self.features_file_name)
         self.true  = torch.Tensor([1])
@@ -91,7 +89,7 @@ class ESM_Embeddings(Dataset):
             extra_pre = window - pos
             out_tensor = pad(embedding[: pos + window + 1], pad=(0, 0, extra_pre, 0), value=0)
         else:
-            raise ValueError(f'Error handling aminoacid window. Tried to get position {pos} with window of {window} in tensor of shape {embedding.size()}')
+            raise ValueError(f'Error handling aminoacid window. Tried to get position {pos} with aminoacid window {window} in tensor of shape {embedding.size()}')
         
         if self.add_dim:
             out_tensor = out_tensor[None, :]
@@ -119,7 +117,7 @@ class ESM_Embeddings(Dataset):
         embeddings_dict = {}
         for i, filename in enumerate(pickle_files):
             pickle_path = path.join(self.pickles_dir, filename)
-            self._log(f'Loading pickle {pickle_path} ({i + 1} of {len(pickle_files)}) {(i + 1)/len(pickle_files) * 100:5.1f}%')
+            self._log(f'Loading embeddings pickle {pickle_path} ({i + 1} of {len(pickle_files)}) {(i + 1)/len(pickle_files) * 100:5.1f}%')
             with open(pickle_path, 'rb') as pickle_file:
                 embeddings_dict.update(pickle.load(pickle_file))
 
@@ -164,21 +162,20 @@ class ESM_Embeddings(Dataset):
                     if self.mode == 'phospho':
                         data[entry] = True
                     elif self.mode == 'kinase':
-                        # if kinases == 'NA':
-                        #     n_unknown_kinase += 1
-                        #     continue
-                        # labels = torch.zeros(len(self.mapping))
-                        # for kinase in kinases.strip().split(','):
-                        #     labels[self.mapping[kinase]] = 1
-                        # data[entry] = labels
-                        
-                        # THIS IS THE RANDOM GENERATION OF KINASES
-                        labels = torch.randint(0, 2, (len(self.mapping),)).type(dtype=torch.float)
+                        if kinases == 'NA':
+                            n_unknown_kinase += 1
+                            continue
+                        labels = torch.zeros(len(self.mapping))
+                        for kinase in kinases.strip().split(','):
+                            categories = [cat.strip() for cat in kinase.split(' ')]
+                            for i in range(len(categories)):
+                                cumulative_cateogries = categories[:i + 1]
+                                cumulative_cateogry_string = ' '.join(cumulative_cateogries)
+                                if cumulative_cateogry_string not in self.mapping:
+                                    break
+                                labels[self.mapping[cumulative_cateogry_string]] = 1
                         data[entry] = labels
-        
-        if self.mode == 'kinase':
-            print('\033[91mWARNING: GENERATED KINASE LABELS RANDOMLY. REMOVE THIS MESSAGE ONLY AFTER KINASES HAVE BEEN FILTERED\033[0m')
-        
+                        
         n_phos = len(data)
         self._log(f'Loaded {n_phos} phosphorylations. {n_missing + n_not_phospho + n_wrong + n_unknown_kinase} discarded ({n_missing} not in pickles, {n_not_phospho} not phosphorylable, {n_wrong} wrongly documented{f", {n_unknown_kinase}  unknown kinase" if self.mode == "kinase" else ""})')
         assert n_phos > 0, 'Loaded 0 phosphorylations'
@@ -219,6 +216,8 @@ class ESM_Embeddings(Dataset):
                 
         data_list = [phos for i, phos in enumerate(data_list) if i not in phos_delete]
         
+        shuffle(data_list)  # If we dont do this, all True phosphorylations are at the beginning and all False at the end, which causes accuracy measures to produce ZeroDivisionError
+        
         self._log(f'Generated data list of length {len(data_list)}. Some examples:\n{sample(data_list, 50 if self.mode == "phospho" else 5)}')
 
         return data_list
@@ -228,3 +227,10 @@ class ESM_Embeddings(Dataset):
         if self.verbose:
             now = t.perf_counter()
             print(f'[{int((now - self.start) // 60):02d}:{(now - self.start) % 60:0>6.3f}]:', msg)
+
+if __name__ == '__main__':
+    ds = ESM_Embeddings(fasta='/zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/merged_db_sequences_kinase.fasta',
+                        features='/zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/kinase_metadata.tsv',
+                        embeddings_dir='/work3/s220260/PhosKing1.0/data/embeddings/embeddings_1280_kinase',
+                        mode='kinase',
+                        small_data=True)

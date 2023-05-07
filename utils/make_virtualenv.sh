@@ -13,6 +13,6 @@ module load python3/3.9.6 cuda/11.7
 virtualenv -p=python3 --verbose --always-copy $dest
 
 $dest/bin/python -m pip install --default-timeout=1000 torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
-$dest/bin/python -m pip install pandas scikit-learn fair-esm
+$dest/bin/python -m pip install pandas scikit-learn fair-esm biopython matplotlib
 
 module purge

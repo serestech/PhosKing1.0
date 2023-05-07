@@ -9,6 +9,7 @@
 *_dump.txt
 data/database_dumps/mmseq_tmp/
 *.pth
+*.info
 
 # Python shit
 *__pycache__*

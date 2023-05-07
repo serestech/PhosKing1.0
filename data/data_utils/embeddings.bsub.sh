@@ -8,7 +8,7 @@
 ### -- Select the resources: 1 gpu in exclusive process mode --
 #BSUB -gpu "num=1:mode=exclusive_process"
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
-#BSUB -W 0:45
+#BSUB -W 8:00
 # -- request system memory --
 #BSUB -R "rusage[mem=50GB]"
 # -- request gpu memory --
@@ -26,12 +26,18 @@
 #BSUB -o /zhome/52/c/174062/logs_o/
 #BSUB -e /zhome/52/c/174062/logs_e/
 
-module purge
-module load python3/3.9.6 cuda/11.7
+user=$(whoami)
+
+if [[ $user == 's220260' ]]; then
+    python_env='/zhome/52/c/174062/torch_pyenv/bin'
+elif [[ $user == 's212716' ]]; then
+    python_env='/zhome/6c/d/164779/pytorch_env/bin'
+fi
+
+export PATH=$python_env:/work3/s220260/software/bin:${PATH}
 
 echo "Working directory: $(pwd)"
 echo "User: $(whoami)"
+echo "Python: $(which python3)"
 
-export PATH=~/torch_pyenv/bin:${PATH}
-
-/zhome/52/c/174062/DL/precompute_embeddings.py
+python3 /zhome/52/c/174062/s220260/PhosKing1.0/data/embeddings/compute_embeddings.py -i /zhome/52/c/174062/s220260/PhosKing1.0/data/homology_reduced/cd-hit_out_29-04.fasta -o /zhome/52/c/174062/s220260/PhosKing1.0/data/embeddings/embeddings_1280

@@ -100,7 +100,7 @@ def load_metadata(main_data_dir, sources, merged_seqs, blacklist, spec_mapping={
                             kin_set = set(kinases.split(','))
 
                         if not metadata.get(m_ID):
-                            metadata[m_ID] = [spec, 0, 0, len(merged_seqs[m_ID]), set(), {ID,}]     # Species, n_entries, n_entries_w_kinase, sources, mirrors
+                            metadata[m_ID] = [spec, 0, 0, len(merged_seqs[m_ID]), {source,}, {ID,}]     # Species, n_entries, n_entries_w_kinase, sources, mirrors
                         else:
                             metadata[m_ID][4].add(source)
                             metadata[m_ID][5].add(ID)

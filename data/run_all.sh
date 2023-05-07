@@ -63,14 +63,13 @@ fi
 echo "---------- Filtering databases ----------"
 
 cd ../train_data
-python3 filter_db.py -f sequences.fasta -i ../database_dumps/temp_features.tsv ../database_dumps/temp_metadata.tsv -o features.tsv metadata.tsv
-python3 filter_db_kin.py -f ../database_dumps/temp_sequences.fasta -t ../database_dumps/temp_features.tsv -m ../database_dumps/temp_metadata.tsv -c ../database_dumps/clusters.tsv
+python3 filter_db.py  -f ../homology_reduced/cd-hit_out_29-04.fasta -i ../clean_data/features.tsv  ../clean_data/metadata.tsv -o features.tsv metadata.tsv
+# Dani's thing of kinases
 
 echo "---------- Computing embeddings ----------"
 
 cd ../embeddings
 # # Make sure to be logged in a CUDA session and to have an environment with torch activated!!!
 # python3 compute_embeddings.py -i ../train_data/sequences.fasta -p 1280 -F 4096 -of 400
-# python3 compute_embeddings.py -i ../train_data/sequences_kin.fasta -p 1280 -f embeddings_kin_1280 -F 4096 -of 400
 
 cd ..
