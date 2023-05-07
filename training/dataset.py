@@ -55,6 +55,11 @@ class ESM_Embeddings(Dataset):
         self.fasta = {ID : seq for ID, seq in self.fasta.items() if ID in self.IDs}
         self._log(f'Discarded {before - len(self.fasta)} sequences that were not in the pickles')
         
+        # Keep only sequences in FASTA
+        before = len(self.embeddings_dict)
+        self.embeddings_dict = {ID: embeddings for ID, embeddings in self.embeddings_dict.items() if ID in self.fasta.keys()}
+        self._log(f'Discarded {before - len(self.embeddings_dict)} sequence embeddings that were not in the FASTA file')
+        
         if self.mode == 'kinase':
             from kinase_mapping import kinase_mapping, kinase_mapping_reverse
             self.mapping = kinase_mapping
@@ -139,7 +144,7 @@ class ESM_Embeddings(Dataset):
         with open(features_file_name, 'r') as features_file:
             for line in features_file:
                 if not line.startswith('#'):
-                    ID, pos, aa, kinases, _, _, _ = line.strip().split('\t')
+                    ID, pos, aa, kinases, _, _ = line.strip().split('\t')
                     pos = int(pos) - 1
                     entry: tuple = (ID, pos)  # aa identified by seq and position (0-indexed)
                     

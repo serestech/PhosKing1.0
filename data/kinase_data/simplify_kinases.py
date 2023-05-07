@@ -57,7 +57,7 @@ for entry in table:
             if tree_kinase != 'NA':
                 kinases_tree_category.add(tree_kinase)
     
-    entry_prefilter = (*entry[:3], ','.join(kinases_tree_category), *entry[4:])
+    entry_prefilter = (*entry[:3], ','.join(kinases_tree_category), *entry[5:])
     table_filtered.append(entry_prefilter)
 
 table = table_filtered
@@ -66,7 +66,7 @@ print(f'{len(table)} entries after filtering', file=sys.stderr)
 
 out_table = f'{HERE}/kinase_metadata.tsv'
 with open(out_table, 'w') as outfile:
-    header = '#id\tpos\taa\tkinases\tspecies\tkin_species\tsource\n'
+    header = '#id\tpos\taa\tkinases\tkin_species\tsource\n'
     outfile.write(header)
     for entry in table:
         outfile.write('\t'.join(entry) + '\n')

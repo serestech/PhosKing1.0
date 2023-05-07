@@ -101,8 +101,9 @@ from math import sqrt
 from sklearn.model_selection import train_test_split
 import time as t
 from sklearn.metrics import roc_auc_score
+import numpy as np
 from numpy import ndarray
-from statistics import mean, median
+from statistics import mean, median, StatisticsError
 
 if args.mode == 'kinase':
     from kinase_mapping import kinase_mapping as mapping
@@ -229,18 +230,37 @@ def kinase_auc(targets: ndarray, predictions: ndarray) -> tuple[float, float, di
     Computes AUC for each kinase class (treats each kinase as a binary classifications). Returns the
     mean of all kinases, the median of all kinases, and a dick containing the AUC for each kinase.
     '''
-   
     results = {}
     for i, kinase in reverse_mapping.items():
         y_true = targets[:,i]
         y_pred = predictions[:,i]
-        auc = roc_auc_score(y_true, y_pred)
+        try:
+            auc = roc_auc_score(y_true, y_pred)
+        except ValueError as err:
+            # This happens when the batch has a small size (last few elements in the epoch) and a kinase has
+            # no phosphorylations in that batch
+            # print(f'WARNING: Failed to compute AUC with error "{err}" {y_true.shape=} {y_pred.shape=}')
+            auc = None
         results[kinase] = auc
     
-    mean_auc = mean(results.values())
-    median_auc = median(results.values())
+    results_nums = [result for result in results.values() if result is not None]
+    
+    try:
+        mean_auc = mean(results_nums)
+        median_auc = median(results_nums)
+    except StatisticsError as err:
+        # This happens in very rare occasions, when the batch has size 1 (last phosphorylation of 
+        # its epoch) and no AUC can be computed above
+        print(f'WARNING: Failed to compute AUC mean and median with error "{err}" {targets.shape=} {predictions.shape=}')
+        mean_auc, median_auc = 0.75, 0.75
 
     return mean_auc, median_auc, results
+
+def parse_num(num: str):
+    '''
+    Convert a number from string to int or float (decides best type)
+    '''
+    return float(num) if '.' in num else int(num) 
 
 # Hacky thing to import the model while knowing file and class name at runtime
 model_dir = os.path.dirname(args.model_file)
@@ -255,7 +275,7 @@ print(f'Using torch device of type {device.type}{": " + torch.cuda.get_device_na
 if args.model_args is None:
     model: torch.nn.Module = model_class()
 else:
-    model: torch.nn.Module = model_class(*[int(arg) for arg in args.model_args.split(',')])
+    model: torch.nn.Module = model_class(*[parse_num(arg) for arg in args.model_args.split(',')])
 model = model.to(device)
 
 dataset = ESM_Embeddings(fasta=args.fasta_path,
@@ -436,9 +456,7 @@ for epoch in range(num_epochs):
             print(f'    Validation AUC:         {val_aucs[-1]:8.5f}   Validation sensitivity: {val_senss[-1]:8.5f}   Validation specificity: {val_specs[-1]:8.5f}   Validation precision: {val_precs[-1]:8.5f}')
 
             # Store best model if early stopping, save it if auto-save
-            if early_stop and \
-               ((args.mode == 'phospho' and val_aucs[-1] > val_auc_best) or \
-                (args.mode == 'kinase' and (val_senss[-1] + 0.25 * val_precs[-1]) > (val_sens_best + 0.25 * val_prec_best))):
+            if early_stop and val_aucs[-1] > val_auc_best:
                 train_loss_best = train_loss
                 train_acc_best = train_accs[-1]
                 train_prec_best = train_precs[-1]
@@ -459,7 +477,7 @@ for epoch in range(num_epochs):
                 step_best = step
                 state_dict_best = copy.deepcopy(model.state_dict())
 
-                if args.auto_save:
+                if args.auto_save and step > 250:
                     test_accs_batch = []
                     test_precs_batch = []
                     test_senss_batch = []

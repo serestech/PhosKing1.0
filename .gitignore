@@ -10,6 +10,10 @@
 data/database_dumps/mmseq_tmp/
 *.pth
 *.info
+*cd-hit*.log
+*cd-hit*.out
+*cd-hit*.restart
+*mmseqs*.fasta*
 
 # Python shit
 *__pycache__*

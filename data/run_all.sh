@@ -25,7 +25,7 @@ python3 ./clean_data/merge_db_mirror.py
 echo -e "\033[32mMerged databases\033[0m"
 
 
-echo '---------- Clustering sequences (MMseqs2) -----------'
+echo '---------- Clustering sequences (MMseqs2, phosphorylation data) -----------'
 
 # Requires having mmseqs in PATH, a symlink can be found in software/bin
 timestamp=$(date +%Y-%m-%d_%H-%M-%S)
@@ -43,7 +43,7 @@ $cmd
 # mv clusters_rep_seq.fasta ../train_data/sequences.fasta -f
 # mv clusters_cluster.tsv clusters.tsv -f
 
-echo "---------- Clustering sequences (CD-HIT) -----------"
+echo "---------- Clustering sequences (CD-HIT, phosphorylation data) -----------"
 
 echo -n "CD-HIT clustering takes a long while and should NOT be done on the login nodes. What do you want to do? (skip/run/exit): "
 read usr_in
@@ -53,12 +53,45 @@ elif [[ $usr_in == "exit" ]]; then
     echo "Exiting"
     exit 1
 elif [[ $usr_in == "run" ]]; then
-    echo "Running CD-HIT... (this takes a long while)"
-    exit 1
+    echo "Running CD-HIT... (this takes a long while, also note that output is not logged to screen, only to files)"
+    ./data_utils/run_cd_hit.sh -i ./homology_reduced/mmseqs_${timestamp}_rep_seq.fasta -o ./homology_reduced/cd-hit_out_${timestamp}
 else
     echo "The option '$usr_in' did not match an option. Exiting"
     exit 1
 fi
+
+echo '---------- Clustering sequences (MMseqs2, kinase data) -----------'
+
+# Requires having mmseqs in PATH, a symlink can be found in software/bin
+timestamp=$(date +%Y-%m-%d_%H-%M-%S)
+MMSEQS_TMP=tmp/mmseqs_tmp_$timestamp
+mkdir -p $MMSEQS_TMP
+SEQ_IDENT=0.35
+SENSITIVITY=7.5
+cmd="mmseqs easy-cluster ./kinase_data/merged_db_sequences_kinase.fasta ./kinase_data/homology_reduced/mmseqs_$timestamp $MMSEQS_TMP --min-seq-id $SEQ_IDENT -s $SENSITIVITY -c 0.8 --cov-mode 0"
+echo "--- mmseqs command ---"
+echo $cmd
+echo "----------------------"
+$cmd
+
+echo "---------- Clustering sequences (CD-HIT, kinase data) -----------"
+
+echo -n "CD-HIT clustering takes a long while and should NOT be done on the login nodes. What do you want to do? (skip/run/exit): "
+read usr_in
+if [[ $usr_in == "skip" ]]; then
+    echo "Skipping CD-HIT"
+elif [[ $usr_in == "exit" ]]; then
+    echo "Exiting"
+    exit 1
+elif [[ $usr_in == "run" ]]; then
+    echo "Running CD-HIT... (this takes a long while, also note that output is not logged to screen, only to files)"
+    ./data_utils/run_cd_hit.sh -i ./kinase_data/homology_reduced/mmseqs_${timestamp}_rep_seq.fasta -o ./kinase_data/homology_reduced/cd-hit_out_${timestamp}
+else
+    echo "The option '$usr_in' did not match an option. Exiting"
+    exit 1
+fi
+
+# TODO: Update from here onwards
 
 echo "---------- Filtering databases ----------"
 

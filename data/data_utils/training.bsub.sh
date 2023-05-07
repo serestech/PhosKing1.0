@@ -44,7 +44,7 @@ read -r -d '' cmd << EOM
 python3 /work3/s220260/PhosKing1.0/training/train_model.py
  -m /work3/s220260/PhosKing1.0/PhosKing/CNN_RNN.py
  -n CNN_RNN_FFNN
- -a 0,1280,1024,512
+ -a 0,1280,1024,4096,3,6,48
  -f /work3/s220260/PhosKing1.0/data/train_data/sequences.fasta
  -ft /work3/s220260/PhosKing1.0/data/train_data/features.tsv
  -emb /work3/s220260/PhosKing1.0/data/embeddings/embeddings_1280/

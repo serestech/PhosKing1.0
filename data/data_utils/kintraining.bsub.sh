@@ -41,16 +41,17 @@ echo "Python: $(which python3)"
 
 # This way the command is logged
 read -r -d '' cmd << EOM
-python3 /work3/s220260/PhosKing1.0/training/train_model.py
+python3 /work3/s220260/PhosKing1.0/training/train_model.new.py
  -m /work3/s220260/PhosKing1.0/PhosKing/CNN_RNN.py
  -n CNN_RNN_FFNN
- -a 15,1280,512,1024,3,6,48,139
- -f /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/merged_db_sequences_kinase.fasta
+ -a 15,1280,512,1024,3,6,48,0.5,150
+ -f /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/homology_reduced/cd-hit_out_2023-05-07_15-20-36.fasta
  -ft /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/kinase_metadata.tsv
- -emb /work3/s220260/PhosKing1.0/data/embeddings/embeddings_1280/
+ -emb /work3/s220260/PhosKing1.0/data/embeddings/embeddings_1280_kinase
  -aaw 15
  -md kinase
  -es
+ -e 60
 EOM
 
 echo -e "Running command:\n$cmd"

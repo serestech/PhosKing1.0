@@ -1,0 +1,1882 @@
+1	|	Homo sapiens	|	 	|	9606
+1	|	Mus musculus	|	 	|	10090
+1	|	Rattus norvegicus	|	 	|	10116
+1	|	Saccharomyces cerevisiae	|	 	|	4932
+1	|	Arabidopsis thaliana	|	 	|	3702
+1	|	Drosophila melanogaster	|	 	|	7227
+1	|	Caenorhabditis elegans	|	 	|	6239
+1	|	Schizosaccharomyces pombe	|	 	|	4896
+2	|	Prokaryote	|	Bacteria	|	2
+1	|	Bos taurus	|	 	|	9913
+1	|	Pongo abelii	|	 	|	9601
+1	|	Sus scrofa	|	 	|	9823
+1	|	Macaca fascicularis	|	 	|	9541
+1	|	Oryctolagus cuniculus	|	 	|	9986
+1	|	Canis lupus familiaris	|	 	|	9615
+1	|	Pan troglodytes	|	 	|	9598
+1	|	Gallus gallus	|	 	|	9031
+1	|	Cricetulus griseus	|	 	|	10029
+1	|	Mesocricetus auratus	|	 	|	10036
+1	|	Ovis aries	|	 	|	9940
+1	|	Dictyostelium discoideum	|	 	|	44689
+1	|	Macaca mulatta	|	 	|	9544
+1	|	Danio rerio	|	 	|	7955
+1	|	Xenopus laevis	|	 	|	8355
+1	|	Equus caballus	|	 	|	9796
+1	|	Felis catus	|	 	|	9685
+1	|	Cavia porcellus	|	 	|	10141
+1	|	Gorilla gorilla gorilla	|	 	|	9595
+1	|	Candida albicans	|	 	|	5476
+1	|	Chlorocebus aethiops	|	 	|	9534
+1	|	Pongo pygmaeus	|	 	|	9600
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Mycobacterium tuberculosis	|	 	|	1773
+2	|	Oryza sativa subsp. japonica	|	Oryza sativa Japonica Group	|	39947
+1	|	Callithrix jacchus	|	 	|	9483
+1	|	Bacillus subtilis	|	 	|	1423
+1	|	Influenza A virus	|	 	|	11320
+1	|	Papio anubis	|	 	|	9555
+1	|	Capra hircus	|	 	|	9925
+1	|	Rotavirus A	|	 	|	28875
+1	|	Ailuropoda melanoleuca	|	 	|	9646
+1	|	Drosophila yakuba	|	 	|	7245
+1	|	Plecturocebus moloch	|	 	|	9523
+1	|	Drosophila erecta	|	 	|	7220
+1	|	Zea mays	|	 	|	4577
+1	|	Hylobates lar	|	 	|	9580
+1	|	Drosophila ananassae	|	 	|	7217
+1	|	Drosophila sechellia	|	 	|	7238
+1	|	Hepatitis C virus genotype 1b	|	hepatitis C virus genotype 1b	|	2847145
+1	|	Sendai virus	|	Murine respirovirus	|	11191
+1	|	Drosophila pseudoobscura pseudoobscura	|	 	|	46245
+1	|	Drosophila virilis	|	 	|	7244
+1	|	Mustela putorius furo	|	 	|	9669
+1	|	Escherichia coli	|	 	|	562
+1	|	Otolemur garnettii	|	 	|	30611
+1	|	Saimiri boliviensis boliviensis	|	 	|	39432
+1	|	Cricetulus longicaudatus	|	 	|	10030
+1	|	Saguinus oedipus	|	 	|	9490
+1	|	Plasmodium falciparum	|	 	|	5833
+1	|	Aotus nancymaae	|	 	|	37293
+1	|	Xenopus tropicalis	|	 	|	8364
+1	|	Loxodonta africana	|	 	|	9785
+1	|	Spermophilus citellus	|	 	|	9997
+1	|	Drosophila grimshawi	|	 	|	7222
+1	|	Drosophila mojavensis	|	 	|	7230
+1	|	Rhinolophus ferrumequinum	|	 	|	59479
+1	|	Drosophila willistoni	|	 	|	7260
+1	|	Dasypus novemcinctus	|	 	|	9361
+1	|	Hepatitis delta virus	|	 	|	12475
+1	|	Pseudomonas aeruginosa	|	 	|	287
+1	|	Pan paniscus	|	 	|	9597
+1	|	Colobus guereza	|	 	|	33548
+1	|	Papio hamadryas	|	 	|	9557
+1	|	Cylindrotheca fusiformis	|	 	|	2853
+2	|	Oryza sativa subsp. indica	|	Oryza sativa Indica Group	|	39946
+1	|	Olea europaea	|	 	|	4146
+1	|	Rabies virus	|	Lyssavirus rabies	|	11292
+1	|	Human immunodeficiency virus type 2	|	Human immunodeficiency virus 2	|	11709
+2	|	Mycobacterium bovis	|	Mycobacterium tuberculosis variant bovis	|	1765
+1	|	Saimiri sciureus	|	 	|	9521
+1	|	Ornithorhynchus anatinus	|	 	|	9258
+1	|	Microcebus murinus	|	 	|	30608
+1	|	Severe acute respiratory syndrome coronavirus 2	|	 	|	2697049
+1	|	Neurospora crassa	|	 	|	5141
+1	|	Ateles geoffroyi	|	 	|	9509
+1	|	Didelphis virginiana	|	 	|	9267
+1	|	Drosophila simulans	|	 	|	7240
+1	|	Camelus dromedarius	|	 	|	9838
+1	|	Escherichia coli O157:H7	|	 	|	83334
+1	|	Drosophila persimilis	|	 	|	7234
+1	|	Macaca nemestrina	|	 	|	9545
+1	|	Atelerix albiventris	|	 	|	9368
+1	|	Ictidomys tridecemlineatus	|	 	|	43179
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Simian immunodeficiency virus	|	 	|	11723
+1	|	Nomascus leucogenys	|	 	|	61853
+1	|	Bacillus cereus	|	 	|	1396
+1	|	Murine coronavirus	|	 	|	694005
+1	|	Psammomys obesus	|	 	|	48139
+1	|	Human T-cell leukemia virus type I	|	 	|	11908
+1	|	Echinops telfairi	|	 	|	9371
+1	|	Severe acute respiratory syndrome coronavirus	|	 	|	2901879
+1	|	Staphylococcus aureus	|	 	|	1280
+1	|	Muntiacus muntjak	|	 	|	9888
+1	|	Sapajus apella	|	 	|	9515
+1	|	Potorous tridactylus	|	 	|	9310
+1	|	Shigella boydii	|	 	|	621
+1	|	Avian infectious bronchitis virus	|	Infectious bronchitis virus	|	11120
+1	|	Bovine coronavirus	|	 	|	11128
+1	|	Chinchilla lanigera	|	 	|	34839
+1	|	Candida glabrata	|	Nakaseomyces glabratus	|	5478
+1	|	Takifugu rubripes	|	 	|	31033
+1	|	Spalax judaei	|	Nannospalax judaei	|	134510
+1	|	Macaca fuscata fuscata	|	 	|	9543
+1	|	Equus asinus	|	 	|	9793
+1	|	Brassica napus	|	 	|	3708
+1	|	Notamacropus eugenii	|	 	|	9315
+1	|	Tupaia belangeri	|	 	|	37347
+1	|	Eulemur macaco macaco	|	 	|	30603
+1	|	Crocuta crocuta	|	 	|	9678
+1	|	Cercocebus atys	|	 	|	9531
+1	|	Severe acute respiratory syndrome coronavirus 2	|	 	|	2697049
+1	|	Vesicular stomatitis Indiana virus	|	 	|	11277
+1	|	Muntiacus reevesi	|	 	|	9886
+1	|	Chlamydomonas reinhardtii	|	 	|	3055
+1	|	Hepatitis C virus genotype 1a	|	hepatitis C virus genotype 1a	|	2847144
+1	|	Neofelis nebulosa	|	 	|	61452
+1	|	Kluyveromyces lactis	|	 	|	28985
+1	|	Human adenovirus C	|	Human mastadenovirus C	|	129951
+1	|	Monodelphis domestica	|	 	|	13616
+1	|	Carollia perspicillata	|	 	|	40233
+1	|	Sorex araneus	|	 	|	42254
+1	|	Marmota monax	|	 	|	9995
+1	|	Ursus americanus	|	 	|	9643
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hepatitis C virus genotype 3a	|	Hepatitis C virus subtype 3a	|	356426
+1	|	Erinaceus europaeus	|	 	|	9365
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Semnopithecus entellus	|	 	|	88029
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Tupaia glis	|	 	|	9395
+1	|	Hepatitis delta virus	|	 	|	12475
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Eulemur fulvus collaris	|	 	|	47178
+1	|	Jaculus orientalis	|	 	|	48868
+1	|	Mandrillus sphinx	|	 	|	9561
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+2	|	Epstein-Barr virus	|	Human gammaherpesvirus 4	|	10376
+1	|	Delphinapterus leucas	|	 	|	9749
+1	|	Human adenovirus C	|	Human mastadenovirus C	|	129951
+1	|	Bos mutus grunniens	|	Bos grunniens	|	30521
+2	|	Human herpesvirus 1	|	Human alphaherpesvirus 1	|	10298
+2	|	Emericella nidulans	|	Aspergillus nidulans	|	162425
+1	|	Nicotiana tabacum	|	 	|	4097
+1	|	Glycine max	|	 	|	3847
+1	|	Rousettus aegyptiacus	|	 	|	9407
+1	|	Spalax ehrenbergi	|	Nannospalax ehrenbergi	|	30637
+1	|	Otospermophilus beecheyi	|	 	|	34862
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Eulemur fulvus fulvus	|	 	|	40322
+1	|	Coturnix japonica	|	 	|	93934
+1	|	Venezuelan equine encephalitis virus	|	 	|	11036
+1	|	Pleurodeles waltl	|	 	|	8319
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Meriones unguiculatus	|	 	|	10047
+1	|	Meles meles	|	 	|	9662
+1	|	Lutra lutra	|	 	|	9657
+1	|	Nasua nasua	|	 	|	9651
+1	|	Piliocolobus badius	|	 	|	164648
+1	|	Ctenodactylus gundi	|	 	|	10166
+1	|	Elephas maximus	|	 	|	9783
+1	|	Bison bonasus	|	 	|	9902
+1	|	Taphozous georgianus	|	 	|	13281
+1	|	Bubalus bubalis	|	 	|	89462
+1	|	Vulpes vulpes	|	 	|	9627
+1	|	Saguinus mystax	|	 	|	9488
+1	|	Marmota marmota marmota	|	 	|	9994
+1	|	Trichechus inunguis	|	 	|	9777
+1	|	Paramecium octaurelia	|	 	|	43137
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	BK polyomavirus	|	Betapolyomavirus hominis	|	1891762
+1	|	Leontocebus fuscicollis	|	 	|	9487
+1	|	Pteropus poliocephalus	|	 	|	9403
+1	|	Martes foina	|	 	|	9659
+1	|	Odocoileus virginianus virginianus	|	 	|	9875
+1	|	Macaca speciosa	|	 	|	9553
+1	|	Urocitellus parryii	|	 	|	9999
+1	|	Macroderma gigas	|	 	|	9411
+1	|	Antrozous pallidus	|	 	|	9440
+1	|	Ailurus fulgens	|	 	|	9649
+1	|	Cynopterus sphinx	|	 	|	9400
+1	|	Mustela lutreola	|	 	|	9666
+1	|	Mustela putorius	|	 	|	9668
+1	|	Dasyurus viverrinus	|	 	|	9279
+1	|	Procyon lotor	|	 	|	9654
+1	|	Rangifer tarandus	|	 	|	9870
+1	|	Macaca sinica	|	 	|	9552
+1	|	Peromyscus crinitus	|	 	|	144753
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Tursiops truncatus	|	 	|	9739
+1	|	Trichosurus vulpecula	|	 	|	9337
+1	|	Otolemur crassicaudatus	|	 	|	9463
+1	|	Bos gaurus frontalis	|	Bos frontalis	|	30520
+1	|	Myotis velifer	|	 	|	9435
+1	|	Balaenoptera acutorostrata	|	 	|	9767
+1	|	Chrysocyon brachyurus	|	 	|	68728
+2	|	Physeter macrocephalus	|	Physeter catodon	|	9755
+1	|	Megaderma lyra	|	 	|	9413
+1	|	Leptonychotes weddellii	|	 	|	9713
+1	|	Rhinoceros unicornis	|	 	|	9809
+1	|	Tamias merriami	|	 	|	123787
+1	|	Draba nemorosa	|	 	|	171822
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Lemur catta	|	 	|	9447
+1	|	Ateles paniscus	|	 	|	9510
+1	|	Panthera onca	|	 	|	9690
+1	|	Talpa europaea	|	 	|	9375
+1	|	Pantholops hodgsonii	|	 	|	59538
+1	|	Pithecia irrorata	|	 	|	30598
+1	|	Ondatra zibethicus	|	 	|	10060
+1	|	Odobenus rosmarus divergens	|	 	|	9708
+1	|	Pteronura brasiliensis	|	 	|	9672
+1	|	Mellivora capensis	|	 	|	9664
+1	|	Ursus thibetanus	|	 	|	9642
+1	|	Macrotus californicus	|	 	|	9419
+1	|	Canine adenovirus	|	Canine mastadenovirus A	|	10537
+1	|	Halalkalibacterium halodurans	|	 	|	86665
+1	|	Helicobacter pylori	|	 	|	210
+1	|	Mus caroli	|	 	|	10089
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hippopotamus amphibius	|	 	|	9833
+1	|	Murine polyomavirus	|	Alphapolyomavirus muris	|	1891730
+1	|	Cervus elaphus	|	 	|	9860
+1	|	Theropithecus gelada	|	 	|	9565
+1	|	Bradypus tridactylus	|	 	|	9354
+1	|	Alces alces alces	|	 	|	9853
+1	|	Lynx lynx	|	 	|	13125
+1	|	Proteles cristata	|	 	|	9680
+1	|	Clostridium botulinum	|	 	|	1491
+1	|	Streptococcus pneumoniae	|	 	|	1313
+1	|	Bacillus licheniformis	|	 	|	1402
+1	|	Plasmodium berghei	|	 	|	5821
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Papio cynocephalus	|	 	|	9556
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Trachypithecus obscurus	|	 	|	54181
+1	|	Cricetomys gambianus	|	 	|	10085
+1	|	Vicugna pacos	|	 	|	30538
+1	|	Phoca vitulina	|	 	|	9720
+1	|	Nycticebus coucang	|	 	|	9470
+1	|	Potato leafroll virus	|	 	|	12045
+1	|	Ammotragus lervia	|	 	|	9899
+1	|	Pteropus alecto	|	 	|	9402
+1	|	Panthera pardus saxicolor	|	 	|	9693
+1	|	Pipistrellus abramus	|	 	|	105295
+1	|	Equus przewalskii	|	 	|	9798
+1	|	Microtus pennsylvanicus	|	 	|	10058
+1	|	Cricetus cricetus	|	 	|	10034
+1	|	Coturnix coturnix	|	 	|	9091
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Plasmodium yoelii yoelii	|	 	|	73239
+2	|	Varicella-zoster virus	|	Human alphaherpesvirus 3	|	10335
+1	|	Procavia capensis habessinica	|	 	|	9814
+1	|	Equus hemionus kulan	|	 	|	73334
+1	|	Peromyscus californicus	|	 	|	42520
+1	|	Cryptococcus neoformans	|	 	|	5207
+1	|	Hepatitis C virus	|	Hepacivirus C	|	11103
+1	|	Human respiratory syncytial virus A	|	 	|	208893
+1	|	Human immunodeficiency virus type 2	|	Human immunodeficiency virus 2	|	11709
+1	|	Nannospalax galili	|	 	|	1026970
+1	|	Equus zebra	|	 	|	9791
+1	|	Cephalopachus bancanus	|	 	|	9477
+1	|	Parechinus angulosus	|	 	|	7658
+1	|	Lama vicugna	|	Vicugna vicugna	|	9843
+1	|	Tapirus terrestris	|	 	|	9801
+1	|	Rat coronavirus	|	 	|	31632
+1	|	Human respiratory syncytial virus B	|	 	|	208895
+1	|	Human coronavirus HKU1	|	 	|	290028
+1	|	Porcine hemagglutinating encephalomyelitis virus	|	 	|	42005
+1	|	Geobacillus stearothermophilus	|	 	|	1422
+1	|	Medicago sativa	|	 	|	3879
+1	|	Human herpesvirus 2	|	Human alphaherpesvirus 2	|	10310
+1	|	Cyprinus carpio	|	 	|	7962
+1	|	Suncus murinus	|	 	|	9378
+1	|	Bison bison	|	 	|	9901
+1	|	Prochlorococcus marinus	|	 	|	1219
+1	|	Hepatitis delta virus	|	 	|	12475
+1	|	Delphinus delphis	|	 	|	9728
+1	|	Tetronarce californica	|	 	|	7787
+1	|	Mycolicibacterium smegmatis	|	 	|	1772
+1	|	Bos indicus	|	 	|	9915
+1	|	Gossypium hirsutum	|	 	|	3635
+1	|	Lagothrix lagotricha	|	 	|	9519
+1	|	Neovison vison	|	Neogale vison	|	452646
+1	|	Zaire ebolavirus	|	 	|	186538
+1	|	Galeopterus variegatus	|	 	|	482537
+2	|	Magnaporthe oryzae	|	Pyricularia oryzae	|	318829
+1	|	Tupaia chinensis	|	 	|	246437
+1	|	Sylvilagus floridanus	|	 	|	9988
+1	|	Cebus capucinus	|	 	|	9516
+1	|	Scheffersomyces stipitis	|	 	|	4924
+1	|	Meyerozyma guilliermondii	|	 	|	4929
+1	|	Panthera tigris sumatrae	|	 	|	9695
+1	|	Loris tardigradus	|	 	|	9468
+1	|	Panthera leo	|	 	|	9689
+1	|	Human adenovirus A	|	Human mastadenovirus A	|	129875
+1	|	Tscherskia triton	|	 	|	329627
+1	|	Globicephala melas	|	 	|	9731
+1	|	Alkalihalobacillus clausii	|	 	|	79880
+1	|	Synechococcus sp.	|	 	|	1131
+1	|	Duck hepatitis B virus	|	 	|	12639
+1	|	Tetrahymena pyriformis	|	 	|	5908
+1	|	Debaryomyces hansenii	|	 	|	4959
+1	|	Vaccinia virus	|	 	|	10245
+1	|	Ashbya gossypii	|	Eremothecium gossypii	|	33169
+1	|	Sminthopsis crassicaudata	|	 	|	9301
+1	|	Onychomys torridus	|	 	|	38674
+1	|	Chalinolobus morio	|	 	|	50353
+1	|	Mico argentatus	|	 	|	9482
+1	|	Ceratotherium simum	|	 	|	9807
+1	|	Primate T-lymphotropic virus 3	|	 	|	194443
+1	|	Geobacillus kaustophilus	|	 	|	1462
+1	|	Turkey coronavirus	|	 	|	11152
+1	|	Blarina brevicauda	|	 	|	9387
+1	|	Bacillus velezensis	|	 	|	492670
+1	|	Spinacia oleracea	|	 	|	3562
+1	|	Paguma larvata	|	 	|	9675
+1	|	Erythrocebus patas	|	 	|	9538
+1	|	Bacillus anthracis	|	 	|	1392
+1	|	Pteropus hypomelanus	|	 	|	9405
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Macaca assamensis	|	 	|	9551
+1	|	Tadarida brasiliensis	|	 	|	9438
+1	|	Macaca sylvanus	|	 	|	9546
+1	|	Aotus trivirgatus	|	 	|	9505
+1	|	Strongylocentrotus purpuratus	|	 	|	7668
+1	|	Triticum aestivum	|	 	|	4565
+1	|	Spalax carmeli	|	 	|	164324
+1	|	Macropus giganteus	|	 	|	9317
+1	|	Antirrhinum majus	|	 	|	4151
+1	|	Cairina moschata	|	 	|	8855
+1	|	Tragelaphus strepsiceros	|	 	|	9946
+1	|	Pteropus giganteus	|	 	|	143291
+1	|	Mesoplodon bidens	|	 	|	48745
+1	|	Bombyx mori	|	 	|	7091
+1	|	Phodopus campbelli	|	 	|	47665
+1	|	Dromaius novaehollandiae	|	 	|	8790
+1	|	Phodopus roborovskii	|	 	|	109678
+1	|	Aotus vociferans	|	 	|	57176
+1	|	Tamiasciurus hudsonicus	|	 	|	10009
+1	|	Bovine respiratory syncytial virus	|	Bovine orthopneumovirus	|	11246
+2	|	Neosartorya fumigata	|	Aspergillus fumigatus	|	746128
+1	|	JC polyomavirus	|	 	|	10632
+2	|	Gibberella zeae	|	Fusarium graminearum	|	5518
+1	|	Oncorhynchus mykiss	|	 	|	8022
+1	|	Tetrahymena thermophila	|	 	|	5911
+1	|	Lama glama	|	 	|	9844
+1	|	Urocitellus townsendii	|	 	|	99861
+1	|	Xylella fastidiosa	|	 	|	2371
+1	|	Canis latrans	|	 	|	9614
+1	|	Simian virus 12	|	 	|	46771
+1	|	Trichechus manatus	|	 	|	9778
+1	|	Bacillus pumilus	|	 	|	1408
+1	|	Canine coronavirus	|	 	|	11153
+1	|	Trachypithecus cristatus	|	 	|	122765
+1	|	Sciurus carolinensis	|	 	|	30640
+1	|	Mus spicilegus	|	 	|	10103
+2	|	Bacillus phage SPbeta	|	Bacillus phage SPBc2	|	2932878
+1	|	Synechocystis sp.	|	 	|	1143
+1	|	Pisum sativum	|	 	|	3888
+1	|	Eastern equine encephalitis virus	|	 	|	11021
+1	|	Caenorhabditis briggsae	|	 	|	6238
+1	|	Influenza C virus	|	 	|	11552
+1	|	Simian virus 40	|	Betapolyomavirus macacae	|	1891767
+1	|	Human cytomegalovirus	|	Human betaherpesvirus 5	|	10359
+1	|	Caluromys philander	|	 	|	70610
+1	|	Oryzias latipes	|	 	|	8090
+1	|	Cavia cutleri	|	 	|	10144
+1	|	Squalus acanthias	|	 	|	7797
+1	|	Mus spretus	|	 	|	10096
+1	|	Mus pahari	|	 	|	10093
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Pseudomonas putida	|	 	|	303
+1	|	Porcine transmissible gastroenteritis coronavirus	|	Transmissible gastroenteritis virus	|	11149
+1	|	Panthera pardus orientalis	|	 	|	9692
+1	|	Sorghum bicolor	|	 	|	4558
+1	|	Tyto alba	|	 	|	56313
+1	|	Reston ebolavirus	|	 	|	186539
+1	|	Human coronavirus OC43	|	 	|	31631
+1	|	Notomys alexis	|	 	|	184396
+1	|	Bacillus cytotoxicus	|	 	|	580165
+1	|	Geobacillus thermodenitrificans	|	 	|	33940
+1	|	Meleagris gallopavo	|	 	|	9103
+1	|	Kluyveromyces marxianus	|	 	|	4911
+1	|	Rhodopseudomonas palustris	|	 	|	1076
+1	|	Human respiratory syncytial virus	|	Human orthopneumovirus	|	11250
+1	|	Equine coronavirus	|	 	|	136187
+1	|	Porcine respiratory coronavirus	|	 	|	11146
+1	|	Tamias striatus	|	 	|	45474
+1	|	Saguinus labiatus	|	 	|	78454
+1	|	Symphalangus syndactylus	|	 	|	9590
+1	|	Lilium longiflorum	|	 	|	4690
+1	|	Carassius auratus	|	 	|	7957
+1	|	Human metapneumovirus	|	 	|	162145
+1	|	Hordeum vulgare	|	 	|	4513
+1	|	Oceanobacillus iheyensis	|	 	|	182710
+1	|	Oenothera elata subsp. hookeri	|	 	|	85636
+1	|	Priestia megaterium	|	 	|	1404
+1	|	Listeria innocua	|	 	|	1642
+1	|	Listeria monocytogenes	|	 	|	1639
+1	|	Synechococcus elongatus	|	 	|	32046
+1	|	Camelus bactrianus	|	 	|	9837
+1	|	Yellow fever virus	|	 	|	11089
+1	|	Psammechinus miliaris	|	 	|	7660
+1	|	Encephalomyocarditis virus	|	 	|	12104
+1	|	Rubella virus	|	 	|	11041
+1	|	Physcomitrium patens	|	 	|	3218
+1	|	Yarrowia lipolytica	|	 	|	4952
+1	|	Dipodomys merriami	|	 	|	94247
+1	|	Rodentia	|	 	|	9989
+1	|	Phytophthora infestans	|	 	|	4787
+1	|	Eospalax fontanierii baileyi	|	 	|	146132
+1	|	Notophthalmus viridescens	|	 	|	8316
+1	|	Aethionema grandiflorum	|	 	|	72657
+1	|	Secale cereale	|	 	|	4550
+1	|	Pseudomonas fluorescens	|	 	|	294
+1	|	Phleum pratense	|	 	|	15957
+1	|	Pagophilus groenlandicus	|	Phoca groenlandica	|	39089
+1	|	Shewanella sp.	|	 	|	50422
+1	|	Bacillus mycoides	|	 	|	1405
+1	|	Rhinopithecus bieti	|	 	|	61621
+1	|	Sminthopsis macroura	|	 	|	9302
+1	|	Mastomys natalensis	|	 	|	10112
+1	|	Tragulus javanicus	|	 	|	9849
+1	|	Ovine respiratory syncytial virus	|	 	|	28869
+1	|	Avian metapneumovirus	|	 	|	38525
+1	|	Dipodillus campestris	|	 	|	41199
+1	|	Stochomys longicaudatus	|	 	|	34856
+1	|	Puffinosis coronavirus	|	 	|	76583
+1	|	Clupea pallasii	|	 	|	30724
+1	|	Mycobacterium leprae	|	 	|	1769
+2	|	Salmonella typhimurium	|	Salmonella enterica subsp. enterica serovar Typhimurium	|	90371
+1	|	Thermus thermophilus	|	 	|	274
+1	|	Medicago truncatula	|	 	|	3880
+1	|	Human papillomavirus type 16	|	 	|	333760
+1	|	Cryptococcus neoformans	|	 	|	5207
+1	|	Human T-lymphotropic virus 2	|	 	|	11909
+1	|	Myotis lucifugus	|	 	|	59463
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Leishmania mexicana	|	 	|	5665
+1	|	Aspergillus niger	|	 	|	5061
+2	|	Hypocrea jecorina	|	Trichoderma reesei	|	51453
+1	|	Zygosaccharomyces rouxii	|	 	|	4956
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Hepatitis B virus genotype D	|	hepatitis B virus genotype D	|	2847137
+1	|	Trypanosoma brucei brucei	|	 	|	5702
+1	|	Aethionema cordifolium	|	 	|	434059
+1	|	Arabis hirsuta	|	 	|	78191
+1	|	Lepidium virginicum	|	 	|	59292
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Hepatitis B virus genotype G	|	hepatitis B virus genotype G	|	2847140
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Australian bat lyssavirus	|	Lyssavirus australis	|	90961
+1	|	Woodchuck hepatitis B virus	|	Woodchuck hepatitis virus	|	35269
+1	|	Colobus polykomos	|	 	|	9572
+1	|	Lymnaea stagnalis	|	 	|	6523
+1	|	Human adenovirus F	|	Human mastadenovirus F	|	130309
+1	|	Anoxybacillus flavithermus	|	 	|	33934
+1	|	Vesicular stomatitis New Jersey virus	|	 	|	11280
+1	|	Alouatta seniculus	|	 	|	9503
+1	|	Variola virus	|	 	|	10255
+2	|	turkey	|	Meleagris gallopavo	|	9103
+1	|	Deinococcus radiodurans	|	 	|	1299
+1	|	Lysinibacillus sphaericus	|	 	|	1421
+1	|	Streptomyces coelicolor	|	 	|	1902
+1	|	Corynebacterium glutamicum	|	 	|	1718
+1	|	Lactococcus lactis subsp. lactis	|	 	|	1360
+1	|	Castor canadensis	|	 	|	51338
+1	|	Nipah virus	|	Nipah henipavirus	|	121791
+1	|	Bovine papillomavirus type 1	|	Deltapapillomavirus 4	|	337052
+1	|	Dengue virus type 2	|	 	|	11060
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Chlorocebus sabaeus	|	 	|	60711
+1	|	Saimiriine herpesvirus 2	|	Saimiriine gammaherpesvirus 2	|	10381
+1	|	Onobrychis viciifolia	|	 	|	3882
+1	|	Ovis canadensis	|	 	|	37174
+1	|	Tribolium castaneum	|	 	|	7070
+1	|	Ictalurus punctatus	|	 	|	7998
+1	|	Apis mellifera	|	 	|	7460
+1	|	Ustilago maydis	|	 	|	5270
+1	|	Crucihimalaya wallichii	|	 	|	78192
+1	|	KI polyomavirus	|	Betapolyomavirus tertihominis	|	1891764
+1	|	Echinus esculentus	|	 	|	7648
+1	|	Sinapis alba	|	 	|	3728
+1	|	Lama guanicoe	|	 	|	9840
+1	|	Aspergillus terreus	|	 	|	33178
+1	|	Argyrosomus regius	|	 	|	172269
+1	|	Cervus nippon	|	 	|	9863
+1	|	Barbarea verna	|	 	|	50458
+1	|	Lactococcus lactis subsp. cremoris	|	Lactococcus cremoris	|	1359
+1	|	Human papillomavirus type 34	|	 	|	333764
+1	|	Human papillomavirus 29	|	 	|	37112
+1	|	Lobularia maritima	|	 	|	226051
+1	|	Human papillomavirus 3	|	 	|	10614
+1	|	Feline sarcoma virus	|	 	|	11772
+2	|	Salmonella typhi	|	Salmonella enterica subsp. enterica serovar Typhi	|	90370
+1	|	Vanderwaltozyma polyspora	|	 	|	36033
+1	|	Hendra virus	|	Hendra henipavirus	|	63330
+1	|	Trachypithecus francoisi	|	 	|	54180
+1	|	Rhinopithecus avunculus	|	 	|	66062
+1	|	Simian immunodeficiency virus	|	 	|	11723
+1	|	Macaca arctoides	|	 	|	9540
+1	|	Raphanus sativus	|	 	|	3726
+1	|	Hylobates moloch	|	 	|	81572
+1	|	Geobacillus sp.	|	 	|	1891658
+1	|	Human adenovirus F	|	Human mastadenovirus F	|	130309
+1	|	Nasalis larvatus	|	 	|	43780
+1	|	Cercocebus galeritus	|	 	|	9532
+1	|	Mus musculus polyomavirus 1	|	Alphapolyomavirus muris	|	1891730
+1	|	Human papillomavirus 73	|	human papillomavirus 73	|	51033
+1	|	Miopithecus talapoin	|	 	|	36231
+1	|	Trachypithecus johnii	|	 	|	66063
+1	|	Cercopithecus cephus	|	 	|	9535
+1	|	Chironomus thummi thummi	|	 	|	7155
+1	|	Legionella pneumophila	|	 	|	446
+1	|	Cercopithecus ascanius	|	 	|	36223
+1	|	Shewanella baltica	|	 	|	62322
+1	|	Electrophorus electricus	|	 	|	8005
+1	|	Escherichia coli O127:H6	|	 	|	168807
+1	|	Lotus japonicus	|	 	|	34305
+1	|	Pediculus humanus	|	 	|	121225
+1	|	Friend murine leukemia virus	|	 	|	11795
+1	|	Rhinella marina	|	 	|	8386
+1	|	Xenotropic MuLV-related virus	|	 	|	438045
+1	|	Solanum tuberosum	|	 	|	4113
+1	|	Aspergillus oryzae	|	 	|	5062
+1	|	Coxiella burnetii	|	 	|	777
+1	|	Aplysia californica	|	 	|	6500
+1	|	Oryza nivara	|	 	|	4536
+1	|	Octodon degus	|	 	|	10160
+1	|	Neosartorya fischeri	|	Aspergillus fischeri	|	36630
+1	|	Lodderomyces elongisporus	|	 	|	36914
+1	|	Petunia sp.	|	 	|	4104
+1	|	Entamoeba histolytica	|	 	|	5759
+1	|	Vigna unguiculata	|	 	|	3917
+1	|	Pinus thunbergii	|	 	|	3350
+1	|	European bat lyssavirus 1	|	European bat 1 lyssavirus	|	57482
+1	|	Hamster polyomavirus	|	Alphapolyomavirus mauratus	|	1891729
+1	|	Murine adenovirus A	|	Murine mastadenovirus A	|	129956
+1	|	Cucumis sativus	|	 	|	3659
+1	|	Serinus canaria	|	 	|	9135
+1	|	Capsella bursa-pastoris	|	 	|	3719
+1	|	Nasturtium officinale	|	 	|	65948
+1	|	Duvenhage virus	|	Lyssavirus duvenhage	|	38767
+1	|	B-lymphotropic polyomavirus	|	 	|	332091
+1	|	Carlito syrichta	|	 	|	1868482
+2	|	Xiphophorus helleri	|	Xiphophorus hellerii	|	8084
+1	|	Coccidioides immitis	|	 	|	5501
+1	|	Nostoc sp.	|	 	|	1180
+1	|	Olimarabidopsis pumila	|	 	|	74718
+1	|	Lagos bat virus	|	Lyssavirus lagos	|	38766
+1	|	Khujand virus	|	Lyssavirus khujand	|	237716
+1	|	Corylus avellana	|	 	|	13451
+1	|	Orycteropus afer	|	 	|	9818
+2	|	Ajellomyces capsulatus	|	Histoplasma capsulatum	|	5037
+1	|	Giraffa camelopardalis	|	 	|	9894
+1	|	Clostridium perfringens	|	 	|	1502
+1	|	Streptococcus thermophilus	|	 	|	1308
+1	|	Haemophilus influenzae	|	 	|	727
+1	|	Choloepus hoffmanni	|	 	|	9358
+1	|	Balaenoptera physalus	|	 	|	9770
+1	|	Osphranter rufus	|	 	|	9321
+1	|	Osphranter robustus	|	 	|	9319
+1	|	Cereibacter sphaeroides	|	 	|	1063
+1	|	Brachypodium distachyon	|	 	|	15368
+1	|	Snake adenovirus 1	|	 	|	189830
+1	|	Murine pneumonia virus	|	Murine orthopneumovirus	|	11263
+1	|	Neisseria gonorrhoeae	|	 	|	485
+1	|	Listeria monocytogenes serotype 4b	|	 	|	2065118
+1	|	Streptococcus mutans serotype c	|	Streptococcus mutans serotype C	|	40287
+1	|	Pneumocystis carinii	|	 	|	4754
+1	|	Dengue virus type 3	|	 	|	11069
+1	|	Dengue virus type 4	|	 	|	11070
+1	|	Pithecia pithecia	|	 	|	43777
+1	|	Aedes aegypti	|	 	|	7159
+1	|	Oryzias javanicus	|	 	|	123683
+1	|	Physarum polycephalum	|	 	|	5791
+1	|	Human papillomavirus 11	|	human papillomavirus 11	|	10580
+1	|	Cocksfoot mottle virus	|	 	|	40979
+1	|	Chlorocebus tantalus	|	 	|	60712
+1	|	Pygathrix nemaeus	|	 	|	54133
+1	|	Middle East respiratory syndrome-related coronavirus	|	 	|	1335626
+1	|	Human adenovirus 5	|	 	|	28285
+1	|	Peromyscus leucopus	|	 	|	10041
+1	|	Scomber scombrus	|	 	|	13677
+1	|	Tachyglossus aculeatus aculeatus	|	 	|	49271
+1	|	Chironomus tentans	|	 	|	7153
+1	|	Chlorocebus pygerythrus	|	 	|	60710
+1	|	Microtus ochrogaster	|	 	|	79684
+1	|	Coffea arabica	|	 	|	13443
+1	|	Aeromonas hydrophila subsp. hydrophila	|	 	|	196023
+1	|	Aspergillus clavatus	|	 	|	5057
+1	|	Wallemia ichthyophaga	|	 	|	245174
+1	|	Plasmodium knowlesi	|	 	|	5850
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Lytechinus pictus	|	 	|	7653
+1	|	Encephalartos altensteinii	|	 	|	3300
+1	|	Acanthamoeba castellanii	|	 	|	5755
+1	|	Human papillomavirus type 10	|	 	|	333759
+1	|	Human papillomavirus 28	|	 	|	37111
+1	|	Vitis vinifera	|	 	|	29760
+1	|	Hydra vulgaris	|	 	|	6087
+1	|	Arctic squirrel hepatitis virus	|	Arctic ground squirrel hepatitis B virus	|	41952
+2	|	Aotus azarae	|	Aotus azarai	|	30591
+1	|	Human papillomavirus type 54	|	 	|	1671798
+1	|	Oryzias curvinotus	|	 	|	104658
+1	|	Hepatitis B virus genotype C	|	hepatitis B virus genotype C	|	2764122
+1	|	Mammut americanum	|	 	|	39053
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Avian sarcoma virus	|	 	|	11876
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Brassica oleracea	|	 	|	3712
+1	|	Galeorhinus galeus	|	 	|	86063
+1	|	Ateles belzebuth	|	 	|	9507
+1	|	Morus indica	|	 	|	248361
+2	|	Phaeosphaeria nodorum	|	Parastagonospora nodorum	|	13684
+1	|	Plasmodium chabaudi	|	 	|	5825
+1	|	Petrosia ficiformis	|	 	|	68564
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Rana dybowskii	|	 	|	71582
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	hepatitis B virus	|	Hepatitis B virus	|	10407
+1	|	Ground squirrel hepatitis virus	|	 	|	10406
+1	|	Tapirus indicus	|	 	|	9802
+1	|	Ascaris suum	|	 	|	6253
+1	|	Oxybasis rubra	|	 	|	3560
+1	|	Crithidia fasciculata	|	 	|	5656
+1	|	Pygmy chimpanzee papillomavirus type 1	|	 	|	10576
+1	|	Vigna aconitifolia	|	 	|	3918
+1	|	Sudan ebolavirus	|	 	|	186540
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Human papillomavirus type 61	|	 	|	37116
+1	|	Cebus albifrons	|	 	|	9514
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Gorilla hepatitis B virus	|	gorilla hepatitis B virus	|	2764097
+1	|	European elk papillomavirus	|	Deltapapillomavirus 1	|	10565
+1	|	hepatitis B virus	|	Hepatitis B virus	|	10407
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Ostreococcus tauri	|	 	|	70448
+1	|	Theileria annulata	|	 	|	5874
+1	|	Theileria parva	|	 	|	5875
+1	|	Helix pomatia	|	 	|	6536
+1	|	Human papillomavirus 72	|	human papillomavirus 72	|	333770
+1	|	Pinus koraiensis	|	 	|	88728
+1	|	Allochrocebus lhoesti	|	 	|	100224
+1	|	Plasmodium vivax	|	 	|	5855
+1	|	Phasianidae sp.	|	 	|	9006
+1	|	Human papillomavirus 42	|	human papillomavirus 42	|	10590
+1	|	Halichoerus grypus	|	 	|	9711
+1	|	Pygmy chimpanzee papillomavirus type 1C	|	Pygmy chimpanzee papillomavirus type 1c	|	521527
+1	|	Phaseolus vulgaris	|	 	|	3885
+1	|	Human papillomavirus 13	|	human papillomavirus 13	|	10573
+1	|	Citrus sinensis	|	 	|	2711
+1	|	Zygnema circumcarinatum	|	 	|	35869
+1	|	Phalaenopsis aphrodite subsp. formosana	|	 	|	308872
+1	|	Panax ginseng	|	 	|	4054
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Callimico goeldii	|	 	|	9495
+1	|	Calycanthus floridus var. glaucus	|	 	|	212734
+1	|	Chaetosphaeridium globosum	|	 	|	96477
+1	|	Oryzias luzonensis	|	 	|	104659
+2	|	Bacillus thuringiensis subsp. konkukian	|	[Bacillus thuringiensis] serovar konkukian	|	180856
+1	|	Doedicurus sp.	|	 	|	1849957
+1	|	Ochotona princeps	|	 	|	9978
+1	|	Mesomycoplasma hyopneumoniae	|	 	|	2099
+1	|	Human papillomavirus 35	|	human papillomavirus 35	|	10587
+2	|	Equine herpesvirus 1	|	Equid alphaherpesvirus 1	|	10326
+1	|	Human papillomavirus type 32	|	 	|	333763
+1	|	Human papillomavirus 40	|	human papillomavirus 40	|	10615
+1	|	Gerbillus sp.	|	 	|	10187
+1	|	Chaetophractus villosus	|	 	|	29080
+1	|	Schistocerca gregaria	|	 	|	7010
+1	|	Burkholderia pseudomallei	|	 	|	28450
+1	|	Human papillomavirus type 6a	|	 	|	37122
+1	|	Rucervus duvaucelii	|	 	|	43328
+1	|	Porcine adenovirus A	|	Porcine mastadenovirus A	|	130369
+1	|	Perodicticus potto edwarsi	|	 	|	9473
+1	|	Capricornis crispus	|	 	|	9966
+1	|	Saiga tatarica	|	 	|	34875
+1	|	Human papillomavirus 7	|	Alphapapillomavirus 8	|	333757
+1	|	Griffithsia japonica	|	 	|	83288
+1	|	Elaphurus davidianus	|	 	|	43332
+1	|	Odocoileus hemionus	|	 	|	9872
+1	|	Ovibos moschatus	|	 	|	37176
+1	|	Peromyscus polionotus	|	 	|	42413
+1	|	Acratocnus ye	|	 	|	2546656
+1	|	Cottontail rabbit papillomavirus	|	Kappapapillomavirus 2	|	10623
+1	|	Human papillomavirus type 6b	|	 	|	10600
+1	|	Capricornis sumatraensis	|	 	|	34865
+1	|	Piper cenocladum	|	 	|	398741
+1	|	Aliivibrio fischeri	|	 	|	668
+1	|	Staphylococcus epidermidis	|	 	|	1282
+1	|	Rattus fuscipes	|	 	|	10119
+1	|	Mazama americana	|	 	|	43334
+1	|	Mandrillus leucophaeus	|	 	|	9568
+1	|	Allochrocebus solatus	|	 	|	147650
+1	|	Microtus arvalis	|	 	|	47230
+1	|	Phocoena phocoena	|	 	|	9742
+1	|	Abutilon mosaic virus	|	 	|	10815
+1	|	Macaca mulata papillomavirus 1	|	 	|	2779844
+1	|	Feline coronavirus	|	 	|	12663
+1	|	Capricornis swinhoei	|	 	|	34866
+1	|	Oreamnos americanus	|	 	|	34873
+1	|	Rupicapra rupicapra	|	 	|	34869
+1	|	Trypanosoma congolense	|	 	|	5692
+1	|	Glossina morsitans morsitans	|	 	|	37546
+1	|	Isoodon macrourus	|	 	|	37698
+1	|	Mico humeralifer	|	 	|	52232
+1	|	Human papillomavirus 44	|	human papillomavirus 44	|	10592
+1	|	Cercopithecus nictitans	|	 	|	36228
+1	|	Naemorhedus goral	|	 	|	34871
+1	|	Canine oral papillomavirus	|	Lambdapapillomavirus 2	|	35258
+1	|	Panthera uncia	|	 	|	29064
+1	|	Acinetobacter baumannii	|	 	|	470
+1	|	Struthio camelus	|	 	|	8801
+1	|	Prionace glauca	|	 	|	7815
+1	|	Thunnus thynnus	|	 	|	8237
+1	|	Hepatitis delta virus	|	 	|	12475
+1	|	Enterococcus faecalis	|	 	|	1351
+1	|	Staphylococcus carnosus	|	 	|	1281
+1	|	Bacillus thuringiensis	|	 	|	1428
+1	|	Shigella flexneri	|	 	|	623
+1	|	Human herpesvirus 8 type P	|	Human gammaherpesvirus 8	|	37296
+1	|	Solanum lycopersicum	|	 	|	4081
+1	|	Japanese encephalitis virus	|	 	|	11072
+1	|	Flaveria trinervia	|	 	|	4227
+1	|	Cebuella pygmaea	|	 	|	9493
+1	|	Boselaphus tragocamelus	|	 	|	9917
+1	|	Andes orthohantavirus	|	 	|	1980456
+1	|	Neisseria meningitidis serogroup B	|	 	|	491
+1	|	Tetradesmus obliquus	|	 	|	3088
+2	|	Botryotinia fuckeliana	|	Botrytis cinerea	|	40559
+1	|	Saccharum hybrid	|	Saccharum sp.	|	15819
+2	|	Petunia hybrida	|	Petunia x hybrida	|	4102
+1	|	Marchantia polymorpha	|	 	|	3197
+1	|	Rous sarcoma virus	|	 	|	11886
+1	|	Oltmannsiellopsis viridis	|	 	|	51324
+1	|	Chaetomium globosum	|	 	|	38033
+1	|	Irkut virus	|	Lyssavirus irkut	|	249583
+1	|	Nephroselmis olivacea	|	 	|	31312
+1	|	Oreochromis mossambicus	|	 	|	8127
+1	|	Cronobacter sakazakii	|	 	|	28141
+1	|	Artemia salina	|	 	|	85549
+1	|	Salmo trutta	|	 	|	8032
+1	|	Liriodendron tulipifera	|	 	|	3415
+1	|	Tupiella akineta	|	 	|	160070
+1	|	Pectobacterium atrosepticum	|	 	|	29471
+1	|	Colletotrichum orbiculare	|	 	|	5465
+1	|	Blumeria graminis	|	 	|	34373
+1	|	Psilotum nudum	|	 	|	3240
+1	|	Anguilla anguilla	|	 	|	7936
+1	|	Yersinia enterocolitica	|	 	|	630
+1	|	Aeromonas salmonicida	|	 	|	645
+1	|	European bat lyssavirus 2	|	European bat 2 lyssavirus	|	57483
+1	|	Serratia proteamaculans	|	 	|	28151
+1	|	Squirrel monkey polyomavirus	|	 	|	452475
+1	|	Hepatitis E virus	|	Hepeviridae	|	291484
+1	|	Nymphaea alba	|	 	|	34301
+1	|	Prochlorococcus marinus subsp. pastoris	|	 	|	142479
+1	|	Adiantum capillus-veneris	|	 	|	13818
+1	|	Mesostigma viride	|	 	|	41882
+1	|	Chlorella vulgaris	|	 	|	3077
+1	|	Stigeoclonium helveticum	|	 	|	55999
+1	|	Aravan virus	|	Lyssavirus aravan	|	211977
+2	|	Hypocrea atroviridis	|	Trichoderma atroviride	|	63577
+1	|	Amborella trichopoda	|	 	|	13333
+1	|	Anthoceros angustus	|	 	|	48387
+1	|	Mus terricolor	|	 	|	254704
+1	|	Halorhodospira halophila	|	 	|	1053
+1	|	Lactiplantibacillus plantarum	|	 	|	1590
+1	|	Mokola virus	|	Lyssavirus mokola	|	12538
+1	|	Chara vulgaris	|	 	|	55564
+1	|	Staurastrum punctulatum	|	 	|	102822
+1	|	Photobacterium profundum	|	 	|	74109
+1	|	Parasynechococcus marenigrum	|	 	|	2881428
+1	|	Stenotrophomonas maltophilia	|	 	|	40324
+1	|	Burkholderia cenocepacia	|	 	|	95486
+1	|	Streptococcus equi subsp. zooepidemicus	|	 	|	40041
+1	|	Bradypus variegatus	|	 	|	9355
+1	|	Bacillus caldotenax	|	[Bacillus] caldotenax	|	1395
+1	|	Drimys granadensis	|	 	|	224735
+1	|	Lactuca sativa	|	 	|	4236
+1	|	Rusa unicolor	|	 	|	662561
+1	|	Eucalyptus globulus subsp. globulus	|	 	|	71271
+1	|	Fusarium culmorum	|	 	|	5516
+1	|	Fowl adenovirus A	|	Fowl aviadenovirus A	|	190061
+1	|	Corynebacterium efficiens	|	 	|	152794
+1	|	Welwitschia mirabilis	|	 	|	3377
+1	|	Corynebacterium diphtheriae	|	 	|	1717
+1	|	Daucus carota	|	 	|	4039
+1	|	Rhizobium etli	|	 	|	29449
+1	|	Helianthus annuus	|	 	|	4232
+1	|	Corynebacterium jeikeium	|	 	|	38289
+1	|	Francisella tularensis subsp. tularensis	|	 	|	119856
+1	|	West Caucasian bat virus	|	Lyssavirus caucasicus	|	249584
+1	|	Desulfovibrio vulgaris	|	 	|	881
+1	|	Balaenoptera borealis	|	 	|	9768
+1	|	Streptomyces griseus	|	 	|	1911
+1	|	Artibeus jamaicensis	|	 	|	9417
+1	|	Pusa sibirica	|	 	|	9719
+1	|	Burkholderia ambifaria	|	 	|	152480
+1	|	Thermotoga maritima	|	 	|	2336
+1	|	Thermosynechococcus vestitus	|	 	|	146786
+1	|	Callithrix jacchus	|	 	|	9483
+1	|	papillomavirus	|	Papillomaviridae	|	151340
+1	|	Rhizobium meliloti	|	Sinorhizobium meliloti	|	382
+1	|	Streptococcus pneumoniae	|	 	|	1313
+1	|	Enterobacter sp.	|	 	|	42895
+1	|	Citrobacter koseri	|	 	|	545
+1	|	Chlamydia trachomatis	|	 	|	813
+1	|	Archaeoglobus fulgidus	|	 	|	2234
+1	|	Mycoplasma pneumoniae	|	Mycoplasmoides pneumoniae	|	2104
+1	|	Streptococcus agalactiae	|	 	|	1311
+1	|	Bordetella bronchiseptica	|	 	|	518
+1	|	Shigella sonnei	|	 	|	624
+1	|	Shewanella oneidensis	|	 	|	70863
+1	|	Caulobacter vibrioides	|	 	|	155892
+1	|	Tula orthohantavirus	|	 	|	1980494
+1	|	Methylobacillus flagellatus	|	 	|	405
+1	|	Dama dama	|	 	|	30532
+1	|	Bordetella avium	|	 	|	521
+1	|	Nitrosospira multiformis	|	 	|	1231
+1	|	Hoolock hoolock	|	 	|	61851
+1	|	Psychrobacter arcticus	|	 	|	334543
+1	|	Dobrava-Belgrade orthohantavirus	|	 	|	1980467
+1	|	New York virus	|	New York hantavirus	|	44755
+1	|	Columba livia	|	 	|	8932
+1	|	Aichi virus	|	Aichi virus 1	|	1313215
+1	|	Moloney murine leukemia virus	|	 	|	11801
+1	|	Semliki forest virus	|	Semliki Forest virus	|	11033
+1	|	Mengo encephalomyocarditis virus	|	Mengo virus	|	12107
+1	|	Simian immunodeficiency virus	|	 	|	11723
+1	|	Trichoderma harzianum	|	 	|	5544
+1	|	Thermococcus kodakarensis	|	 	|	311400
+1	|	Sin Nombre orthohantavirus	|	 	|	1980491
+1	|	Heterocephalus glaber	|	 	|	10181
+1	|	Black Creek Canal orthohantavirus	|	 	|	1980460
+1	|	Western equine encephalitis virus	|	 	|	11039
+1	|	Zika virus	|	 	|	64320
+1	|	Rift valley fever virus	|	Rift Valley fever virus	|	11588
+1	|	Mus cookii	|	 	|	10098
+1	|	Mannheimia succiniciproducens	|	[Mannheimia] succiniciproducens	|	157673
+1	|	Nitrosomonas europaea	|	 	|	915
+1	|	Acomys cahirinus	|	 	|	10068
+1	|	Potato mop-top virus	|	 	|	37128
+1	|	Buxus microphylla	|	 	|	153571
+1	|	Ipomoea purpurea	|	 	|	4121
+1	|	Ceratophyllum demersum	|	 	|	4428
+1	|	Cuscuta gronovii	|	 	|	35886
+1	|	Salmonella arizonae	|	Salmonella enterica subsp. arizonae	|	59203
+1	|	Cryptomeria japonica	|	 	|	3369
+1	|	Aptenodytes patagonicus	|	 	|	9234
+1	|	Procavia capensis	|	 	|	9813
+1	|	Hepatitis B virus	|	 	|	10407
+1	|	Hystrix cristata	|	 	|	10137
+1	|	Suid herpesvirus 1	|	Suid alphaherpesvirus 1	|	10345
+1	|	Mycoplasma capricolum subsp. capricolum	|	 	|	40479
+1	|	Cricetulus migratorius	|	 	|	10032
+1	|	Human papillomavirus 20	|	human papillomavirus 20	|	31547
+1	|	Human papillomavirus 19	|	 	|	10608
+1	|	Human papillomavirus 25	|	human papillomavirus 25	|	10609
+1	|	Nitrosomonas eutropha	|	 	|	916
+1	|	Zymoseptoria tritici	|	 	|	1047171
+1	|	Psychrobacter cryohalolentis	|	 	|	330922
+1	|	Nitrosococcus oceani	|	 	|	1229
+1	|	Zymomonas mobilis subsp. mobilis	|	 	|	120045
+2	|	Salmonella paratyphi A	|	Salmonella enterica subsp. enterica serovar Paratyphi A	|	54388
+1	|	Macaca nigra	|	 	|	54600
+1	|	Methanococcus maripaludis	|	 	|	39152
+1	|	Virgibacillus halodenitrificans	|	 	|	1482
+1	|	Podospora anserina	|	 	|	2587412
+1	|	Pseudomonas stutzeri	|	Stutzerimonas stutzeri	|	316
+1	|	WU polyomavirus	|	WU Polyomavirus	|	440266
+1	|	Cycas taitungensis	|	 	|	54799
+1	|	Cuscuta exaltata	|	 	|	476139
+1	|	Actinobacillus pleuropneumoniae	|	 	|	715
+1	|	Pygoscelis adeliae	|	 	|	9238
+1	|	Woolly monkey hepatitis B virus	|	 	|	68416
+1	|	Ateles sp.	|	 	|	9511
+1	|	Colobus angolensis	|	 	|	54131
+1	|	Cuscuta reflexa	|	 	|	4129
+1	|	Human papillomavirus 23	|	 	|	37955
+1	|	Neisseria meningitidis	|	 	|	487
+1	|	Pseudoalteromonas atlantica	|	 	|	288
+1	|	Saccharophagus degradans	|	 	|	86304
+1	|	Pseudomonas savastanoi pv. phaseolicola	|	 	|	319
+1	|	Rickettsia felis	|	 	|	42862
+2	|	Cochliobolus heterostrophus	|	Bipolaris maydis	|	5016
+1	|	Huperzia lucidula	|	 	|	37429
+1	|	Acinetobacter baylyi	|	 	|	202950
+1	|	Hapalemur griseus	|	 	|	13557
+1	|	Cryphonectria parasitica	|	 	|	5116
+1	|	Pseudomonas syringae pv. tomato	|	 	|	323
+1	|	Hortaea werneckii	|	 	|	91943
+1	|	Microtus mexicanus	|	 	|	79689
+1	|	Populus alba	|	 	|	43335
+1	|	Chloranthus spicatus	|	 	|	13006
+1	|	Dioscorea elephantipes	|	 	|	145284
+1	|	Illicium oligandrum	|	 	|	145286
+1	|	Klebsiella pneumoniae subsp. pneumoniae	|	 	|	72407
+1	|	Pleurastrum terricola	|	 	|	34116
+1	|	Neisseria meningitidis serogroup C	|	 	|	135720
+1	|	Actinobacillus pleuropneumoniae serotype 7	|	Actinobacillus pleuropneumoniae serovar 7	|	209841
+1	|	Human papillomavirus type RTRX7	|	Human papillomavirus RTRX7	|	79691
+1	|	Mirounga leonina	|	 	|	9715
+1	|	Lepus europaeus	|	 	|	9983
+1	|	Varecia variegata	|	 	|	9455
+1	|	Human papillomavirus 57	|	human papillomavirus 57	|	333753
+1	|	Bovine polyomavirus	|	Epsilonpolyomavirus bovis	|	1891754
+1	|	Human papillomavirus 14	|	human papillomavirus 14	|	10605
+1	|	Picea abies	|	 	|	3329
+1	|	Human papillomavirus 36	|	human papillomavirus 36	|	37957
+1	|	Simian immunodeficiency virus	|	 	|	11723
+1	|	Nandina domestica	|	 	|	41776
+1	|	Alcanivorax borkumensis	|	 	|	59754
+1	|	Pseudomonas entomophila	|	 	|	312306
+1	|	Torulaspora delbrueckii	|	 	|	4950
+1	|	Sodalis glossinidius	|	 	|	63612
+1	|	Hahella chejuensis	|	 	|	158327
+1	|	Aspergillus glaucus	|	 	|	41413
+1	|	Blochmannia pennsylvanicus	|	Candidatus Blochmannia pennsylvanicus	|	101534
+1	|	Setosphaeria turcica	|	Exserohilum turcicum	|	93612
+1	|	Photorhabdus laumondii subsp. laumondii	|	 	|	141679
+1	|	Bordetella pertussis	|	 	|	520
+1	|	Mastomys natalensis papillomavirus	|	Iotapapillomavirus 1	|	10567
+1	|	Rickettsia prowazekii	|	 	|	782
+1	|	Neisseria meningitidis	|	 	|	487
+1	|	Psychromonas ingrahamii	|	 	|	357794
+1	|	Vesicomyosocius okutanii	|	Candidatus Vesicomyosocius okutanii	|	412965
+1	|	Psychrobacter sp.	|	 	|	56811
+1	|	Bordetella petrii	|	 	|	94624
+1	|	Buchnera aphidicola	|	 	|	9
+1	|	Baumannia cicadellinicola	|	Candidatus Baumannia cicadellinicola	|	186490
+1	|	Scapanus orarius	|	 	|	182674
+1	|	Scalopus aquaticus	|	 	|	71119
+1	|	Pseudoalteromonas translucida	|	 	|	166935
+1	|	Thiobacillus denitrificans	|	 	|	36861
+1	|	Beauveria bassiana	|	 	|	176275
+1	|	Cheracebus torquatus	|	 	|	30592
+1	|	Alouatta belzebul	|	 	|	30590
+1	|	Bovine papillomavirus type 5	|	Epsilonpapillomavirus 1	|	40537
+1	|	Blochmannia floridanus	|	Candidatus Blochmannia floridanus	|	203907
+1	|	Ruthia magnifica	|	Candidatus Ruthturnera calyptogenae	|	386487
+1	|	Angiopteris evecta	|	 	|	13825
+1	|	Pseudomonas mendocina	|	 	|	300
+1	|	Actinobacillus succinogenes	|	 	|	67854
+1	|	Lemna minor	|	 	|	4472
+1	|	Edwardsiella ictaluri	|	 	|	67780
+1	|	Bifidobacterium longum	|	 	|	216816
+1	|	Lactobacillus helveticus	|	 	|	1587
+1	|	Miniopterus schreibersii	|	 	|	9433
+1	|	Bos taurus papillomavirus 2	|	 	|	2758382
+1	|	Human papillomavirus type 2a	|	 	|	10584
+1	|	Catostomus commersonii	|	 	|	7971
+1	|	Human papillomavirus 27	|	human papillomavirus 27	|	333752
+1	|	Human papillomavirus 21	|	human papillomavirus 21	|	31548
+1	|	Human papillomavirus 12	|	human papillomavirus 12	|	10604
+1	|	Human papillomavirus 4	|	 	|	10617
+1	|	Human papillomavirus 65	|	 	|	28312
+1	|	Chlorokybus atmophyticus	|	 	|	3144
+1	|	Rickettsia bellii	|	 	|	33990
+1	|	Orcinus orca	|	 	|	9733
+2	|	Cochliobolus miyabeanus	|	Bipolaris oryzae	|	101162
+1	|	Pseudomonas syringae pv. syringae	|	 	|	321
+1	|	Alternaria brassicicola	|	 	|	29001
+1	|	Blastobotrys adeninivorans	|	 	|	409370
+1	|	Chromobacterium violaceum	|	 	|	536
+1	|	Ralstonia pickettii	|	 	|	329
+1	|	Rickettsia conorii	|	 	|	781
+1	|	Oryza sativa	|	 	|	4530
+1	|	Streptococcus sanguinis	|	 	|	1305
+1	|	Bat coronavirus HKU4	|	Tylonycteris bat coronavirus HKU4	|	694007
+1	|	Streptococcus suis	|	 	|	1307
+1	|	Limosilactobacillus reuteri	|	 	|	1598
+1	|	Geotalea daltonii	|	 	|	1203471
+1	|	Macrauchenia	|	 	|	1563126
+1	|	Neocnus dousman	|	 	|	2546657
+1	|	Glyptodon	|	 	|	2546652
+1	|	Nothrotheriops shastensis	|	 	|	136416
+1	|	Lycaon pictus	|	 	|	9622
+1	|	Gorilla gorilla beringei	|	Gorilla beringei beringei	|	1159185
+1	|	Lepilemur mustelinus	|	 	|	9453
+1	|	Human papillomavirus	|	 	|	10566
+2	|	Human immunodeficiency virus type 1	|	Human immunodeficiency virus 1	|	11676
+1	|	Heron hepatitis B virus	|	 	|	28300
+1	|	Castor fiber	|	 	|	10185
+1	|	Human papillomavirus 31	|	human papillomavirus 31	|	10585
+1	|	Human papillomavirus type 49	|	 	|	10616
+1	|	Leontopithecus rosalia	|	 	|	30588
+1	|	Daubentonia madagascariensis	|	 	|	31869
+1	|	Human papillomavirus 9	|	 	|	10621
+2	|	Pelargonium hortorum	|	Pelargonium x hortorum	|	4031
+1	|	Bovine alphaherpesvirus 1	|	 	|	10320
+1	|	Kogia sima	|	 	|	9752
+1	|	Bat coronavirus	|	 	|	1508220
+1	|	Ligilactobacillus salivarius	|	 	|	1624
+1	|	Moorella thermoacetica	|	 	|	1525
+1	|	Latilactobacillus sakei subsp. sakei	|	 	|	214326
+1	|	Cebus olivaceus	|	 	|	37295
+1	|	Clostridium tetani	|	 	|	1513
+1	|	Capreolus capreolus	|	 	|	9858
+1	|	Ovis dalli	|	 	|	9943
+1	|	Vibrio cholerae	|	 	|	666
+1	|	Microtus montebelli	|	 	|	79202
+1	|	Shewanella amazonensis	|	 	|	60478
+1	|	Acetivibrio thermocellus	|	 	|	1515
+1	|	Wallemia muriae	|	 	|	245175
+1	|	Desulforamulus reducens	|	 	|	59610
+1	|	Streptococcus gordonii	|	 	|	1302
+1	|	Limosilactobacillus fermentum	|	 	|	1613
+1	|	Talaromyces stipitatus	|	 	|	28564
+1	|	Streptococcus uberis	|	 	|	1349
+1	|	Macrococcus caseolyticus	|	 	|	69966
+1	|	Neocnus comes	|	 	|	2546658
+1	|	Parocnus serus	|	 	|	2546659
+1	|	Callosciurus caniceps	|	 	|	64664
+1	|	Vulpes chama	|	 	|	9626
+1	|	Zalophus californianus	|	 	|	9704
+1	|	Balaenoptera edeni	|	 	|	9769
+1	|	Megaptera novaeangliae	|	 	|	9773
+1	|	Mesoplodon stejnegeri	|	 	|	52114
+1	|	Human papillomavirus 5	|	 	|	333923
+2	|	Equine herpesvirus 4	|	Equid alphaherpesvirus 4	|	10331
+1	|	Human papillomavirus type 5b	|	 	|	10599
+1	|	Schistosoma mansoni	|	 	|	6183
+1	|	Human papillomavirus 24	|	human papillomavirus 24	|	37956
+1	|	Arctocephalus galapagoensis	|	 	|	30584
+1	|	Human papillomavirus 15	|	 	|	10606
+1	|	Cheirogaleus medius	|	 	|	9460
+1	|	Staphylococcus saprophyticus subsp. saprophyticus	|	Staphylococcus saprophyticus	|	29385
+1	|	Staphylococcus haemolyticus	|	 	|	1283
+1	|	Lactobacillus acidophilus	|	 	|	1579
+1	|	Coleochaete orbicularis	|	 	|	3124
+1	|	Vibrio vulnificus	|	 	|	672
+1	|	Spring viremia of carp virus	|	Sprivivirus cyprinus	|	696863
+1	|	Suberites domuncula	|	 	|	55567
+1	|	Fowlpox virus	|	 	|	10261
+1	|	Mus musculus castaneus	|	 	|	10091
+1	|	Wallemia sebi	|	 	|	148960
+1	|	Sordaria macrospora	|	 	|	5147
+1	|	Callithrix geoffroyi	|	 	|	52231
+1	|	Beta vulgaris	|	 	|	161934
+1	|	Inia geoffrensis	|	 	|	9725
+1	|	Lagostomus maximus	|	 	|	10154
+1	|	Human papillomavirus type 8	|	 	|	10579
+1	|	Turnip yellows virus	|	 	|	131083
+1	|	Human papillomavirus type 41	|	 	|	10589
+1	|	Turkey rhinotracheitis virus	|	 	|	11264
+1	|	Human papillomavirus 52	|	human papillomavirus 52	|	10618
+1	|	Latilactobacillus sakei	|	 	|	1599
+1	|	Lactobacillus johnsonii	|	 	|	33959
+1	|	Fusarium vanettenii	|	 	|	2747968
+1	|	Pediococcus pentosaceus	|	 	|	1255
+1	|	Jasminum nudiflorum	|	 	|	126431
+1	|	Shewanella frigidimarina	|	 	|	56812
+2	|	Gibberella intermedia	|	Fusarium proliferatum	|	948311
+1	|	Human papillomavirus 38	|	 	|	37959
+1	|	Bovine papillomavirus type 3	|	Xipapillomavirus 1	|	10561
+1	|	Rattus tunneyi	|	 	|	10121
+1	|	Propithecus verreauxi	|	 	|	34825
+1	|	Ancylostoma caninum	|	 	|	29170
+1	|	Bat coronavirus HKU9	|	Rousettus bat coronavirus HKU9	|	694006
+1	|	Methylorubrum extorquens	|	 	|	408
+1	|	Thermoanaerobacter pseudethanolicus	|	 	|	496866
+1	|	Xanthomonas oryzae pv. oryzae	|	 	|	64187
+1	|	Cicer arietinum	|	 	|	3827
+1	|	Bifidobacterium animalis subsp. lactis	|	 	|	302911
+1	|	Equus	|	 	|	9789
+1	|	Cyclopes didactylus	|	 	|	84074
+1	|	Toxodon	|	 	|	1563121
+1	|	Sciurus vulgaris	|	 	|	55149
+1	|	Scelidodon	|	 	|	2546655
+1	|	Megatherium americanum	|	 	|	2546660
+1	|	Megalonyx jeffersonii	|	 	|	2576014
+1	|	Verticillium alfalfae	|	 	|	1051613
+1	|	Melursus ursinus	|	 	|	9636
+1	|	Human papillomavirus 51	|	human papillomavirus 51	|	10595
+1	|	Mycoplasma genitalium	|	Mycoplasmoides genitalium	|	2097
+1	|	Porcine epidemic diarrhea virus	|	 	|	28295
+1	|	Human papillomavirus type 63	|	 	|	28311
+1	|	Indopacetus pacificus	|	 	|	221924
+1	|	Equus grevyi	|	 	|	9792
+1	|	Cichorium intybus	|	 	|	13427
+1	|	Klebsormidium bilatum	|	 	|	201239
+1	|	Human papillomavirus 37	|	 	|	37958
+1	|	Bat coronavirus HKU5	|	Pipistrellus bat coronavirus HKU5	|	694008
+1	|	Anaplasma marginale	|	 	|	770
+1	|	Mylodon darwinii	|	 	|	48784
+1	|	Acratocnus	|	 	|	2546647
+1	|	Glossotherium robustum	|	 	|	2591764
+1	|	Scelidotherium	|	 	|	2546654
+1	|	Paramylodon harlani	|	 	|	2546661
+1	|	Streptococcus equi subsp. equi	|	 	|	148942
+1	|	Hylobates agilis	|	 	|	9579
+1	|	Ziphius cavirostris	|	 	|	9760
+1	|	Manis javanica	|	 	|	9974
+1	|	Proechimys guairae	|	 	|	10163
+1	|	Human papillomavirus 47	|	human papillomavirus 47	|	10594
+1	|	Parachlorella kessleri	|	 	|	3074
+1	|	Human papillomavirus 22	|	 	|	37954
+1	|	Otocyon megalotis	|	 	|	9624
+1	|	Human papillomavirus 17	|	 	|	10607
+1	|	Peponocephala electra	|	 	|	103596
+1	|	Blastocystis hominis	|	 	|	12968
+1	|	Lactobacillus delbrueckii subsp. bulgaricus	|	 	|	1585
+1	|	Colwellia psychrerythraea	|	 	|	28229
+1	|	Mus saxicola	|	 	|	10094
+1	|	Cutibacterium acnes	|	 	|	1747
+1	|	Ochotona curzoniae	|	 	|	130825
+1	|	Human papillomavirus type 60	|	 	|	40540
+1	|	Human papillomavirus 59	|	human papillomavirus 59	|	37115
+1	|	Thermotoga neapolitana	|	 	|	2337
+1	|	Rhea americana	|	 	|	8797
+1	|	Saimiri ustus	|	 	|	66265
+1	|	Beet western yellows virus	|	 	|	12042
+1	|	Streptomyces avermitilis	|	 	|	33903
+1	|	Cryptosporidium parvum	|	 	|	5807
+1	|	Dehalococcoides mccartyi	|	 	|	61435
+1	|	Balaena mysticetus	|	 	|	27602
+1	|	Avena sativa	|	 	|	4498
+1	|	Haloferax volcanii	|	 	|	2246
+1	|	Streptococcus salivarius	|	 	|	1304
+1	|	Lactobacillus casei	|	Lacticaseibacillus casei	|	1582
+1	|	Streptococcus equinus	|	 	|	1335
+1	|	Ovis aries musimon	|	 	|	9938
+1	|	Cas-Br-E murine leukemia virus	|	 	|	11792
+1	|	Murine leukemia virus	|	 	|	11786
+1	|	Flaveria pringlei	|	 	|	4226
+1	|	Giardia intestinalis	|	 	|	5741
+1	|	Radiation murine leukemia virus	|	 	|	11787
+1	|	Plecturocebus donacophilus	|	 	|	230833
+1	|	West Nile virus	|	 	|	11082
+1	|	Ross river virus	|	Ross River virus	|	11029
+1	|	Dengue virus type 1	|	dengue virus type I	|	11053
+1	|	AKV murine leukemia virus	|	AKR (endogenous) murine leukemia virus	|	11791
+1	|	Tityus serrulatus	|	 	|	6887
+1	|	Thermotoga petrophila	|	 	|	93929
+1	|	Methanocaldococcus jannaschii	|	 	|	2190
+1	|	Betula pendula	|	 	|	3505
+1	|	Tolumonas auensis	|	 	|	43948
+1	|	Treponema pallidum	|	 	|	160
+1	|	Chlamydomonas moewusii	|	 	|	3054
+1	|	Yersinia pestis	|	 	|	632
+1	|	Agaricus bisporus	|	 	|	5341
+1	|	Gossypium barbadense	|	 	|	3634
+1	|	Gnetum parvifolium	|	 	|	33153
+1	|	Yersinia pseudotuberculosis	|	 	|	633
+1	|	Escherichia coli	|	 	|	562
+1	|	Nicotiana plumbaginifolia	|	 	|	4092
+1	|	Shigella dysenteriae	|	 	|	622
+1	|	Rickettsia typhi	|	 	|	785
+1	|	Dugesia japonica	|	 	|	6161
+1	|	Yersinia pseudotuberculosis	|	 	|	633
+1	|	Escherichia fergusonii	|	 	|	564
+1	|	Azotobacter vinelandii	|	 	|	354
+1	|	Acaryochloris marina	|	 	|	155978
+1	|	Neomonachus schauinslandi	|	 	|	29088
+1	|	Sclerotinia sclerotiorum	|	 	|	5180
+2	|	Salmonella gallinarum	|	Salmonella enterica subsp. enterica serovar Gallinarum	|	594
+1	|	Salmo salar	|	 	|	8030
+1	|	Geodia cydonium	|	 	|	6047
+1	|	Acorus calamus	|	 	|	4465
+1	|	Rippkaea orientalis	|	 	|	2546366
+1	|	Escherichia coli O7:K1	|	 	|	1072458
+1	|	Mesembryanthemum crystallinum	|	 	|	3544
+1	|	Mycobacterium ulcerans	|	 	|	1809
+1	|	Pelobacter propionicus	|	 	|	29543
+1	|	Methylibium petroleiphilum	|	 	|	105560
+1	|	Herminiimonas arsenicoxydans	|	 	|	204773
+1	|	Acidiphilium cryptum	|	 	|	524
+1	|	Clostridium beijerinckii	|	 	|	1520
+1	|	Nitratiruptor sp.	|	 	|	2081525
+1	|	Klebsiella pneumoniae	|	 	|	573
+1	|	Campylobacter hominis	|	 	|	76517
+1	|	Campylobacter concisus	|	 	|	199
+1	|	Salinispora arenicola	|	 	|	168697
+1	|	Cuscuta obtusiflora	|	 	|	437280
+1	|	Heliobacterium modesticaldum	|	Heliomicrobium modesticaldum	|	35701
+1	|	Oenothera biennis	|	 	|	3942
+1	|	Thermotoga sp.	|	 	|	28240
+1	|	Guizotia abyssinica	|	 	|	4230
+1	|	Trichlorobacter lovleyi	|	 	|	313985
+1	|	Chloroherpeton thalassium	|	 	|	100716
+1	|	Thermodesulfovibrio yellowstonii	|	 	|	28262
+1	|	Rhodospirillum centenum	|	 	|	34018
+1	|	Afipia carboxidovorans	|	 	|	40137
+1	|	Halothermothrix orenii	|	 	|	31909
+1	|	Pseudarthrobacter chlorophenolicus	|	 	|	85085
+1	|	Ruminiclostridium cellulolyticum	|	 	|	1521
+1	|	Methylobacterium nodulans	|	 	|	114616
+1	|	Brevibacillus brevis	|	 	|	1393
+1	|	Hamiltonella defensa	|	Candidatus Hamiltonella defensa	|	138072
+1	|	Exiguobacterium sp.	|	 	|	44751
+1	|	Teredinibacter turnerae	|	 	|	2426
+1	|	Pectobacterium carotovorum subsp. carotovorum	|	 	|	555
+1	|	Aquifex aeolicus	|	 	|	63363
+1	|	Borreliella burgdorferi	|	 	|	139
+1	|	Peribacillus psychrosaccharolyticus	|	 	|	1407
+1	|	Human adenovirus B	|	Human mastadenovirus B	|	108098
+1	|	Chlamydia muridarum	|	 	|	83560
+1	|	Leuconostoc mesenteroides subsp. mesenteroides	|	 	|	33967
+1	|	Maricaulis maris	|	 	|	74318
+1	|	Cupriavidus necator	|	 	|	106590
+1	|	Paraburkholderia xenovorans	|	 	|	36873
+1	|	Roseobacter denitrificans	|	 	|	2434
+1	|	Deinococcus geothermalis	|	 	|	68909
+1	|	Chromohalobacter salexigens	|	 	|	158080
+1	|	Albidiferax ferrireducens	|	Rhodoferax ferrireducens	|	192843
+1	|	Atropa belladonna	|	 	|	33113
+1	|	Oleidesulfovibrio alaskensis	|	 	|	58180
+1	|	Fagopyrum esculentum subsp. ancestrale	|	 	|	180217
+1	|	Aromatoleum aromaticum	|	 	|	551760
+1	|	Desulfotalea psychrophila	|	 	|	84980
+1	|	Mesoplasma florum	|	 	|	2151
+1	|	Hepatitis E virus genotype 3	|	Hepatitis E virus type 3	|	509628
+1	|	Bdellovibrio bacteriovorus	|	 	|	959
+1	|	Mycobacterium paratuberculosis	|	Mycobacterium avium subsp. paratuberculosis	|	1770
+1	|	Bordetella parapertussis	|	 	|	519
+1	|	Tropheryma whipplei	|	 	|	2039
+2	|	Salmonella enteritidis	|	Salmonella enterica subsp. enterica serovar Enteritidis	|	149539
+1	|	Brassica juncea	|	 	|	3707
+1	|	Mesorhizobium japonicum	|	 	|	2066070
+1	|	Listeria welshimeri	|	 	|	1643
+1	|	Arthrobacter sp.	|	 	|	1667
+1	|	Bartonella bacilliformis	|	 	|	774
+1	|	Bradyrhizobium sp.	|	 	|	376
+1	|	Clostridium kluyveri	|	 	|	1534
+1	|	Kineococcus radiotolerans	|	 	|	131568
+1	|	Xanthobacter autotrophicus	|	 	|	280
+1	|	Gluconacetobacter diazotrophicus	|	 	|	33996
+1	|	Bartonella tribocorum	|	 	|	85701
+1	|	Brucella suis biovar 1	|	Brucella suis bv. 1	|	644346
+1	|	Francisella philomiragia subsp. philomiragia	|	Francisella philomiragia	|	28110
+1	|	Carica papaya	|	 	|	3649
+1	|	Desulforudis audaxviator	|	Candidatus Desulforudis audaxviator	|	471827
+1	|	Corynebacterium urealyticum	|	 	|	43771
+1	|	Streptomyces griseus subsp. griseus	|	 	|	67263
+1	|	Exiguobacterium sibiricum	|	 	|	332410
+1	|	Paraburkholderia phymatum	|	 	|	148447
+1	|	Cupriavidus taiwanensis	|	 	|	164546
+1	|	Bifidobacterium longum subsp. infantis	|	 	|	1682
+1	|	Dictyoglomus turgidum	|	 	|	513050
+1	|	Desulforapulum autotrophicum	|	 	|	2296
+1	|	Lachnospira eligens	|	 	|	39485
+2	|	Brassica campestris	|	Brassica rapa subsp. oleifera	|	145471
+1	|	Human adenovirus E	|	Human mastadenovirus E	|	130308
+1	|	Streptococcus pyogenes serotype M3	|	 	|	301448
+1	|	Mycoplasma mycoides subsp. mycoides SC	|	 	|	44101
+1	|	Myxococcus xanthus	|	 	|	34
+1	|	Lacticaseibacillus casei	|	 	|	1582
+1	|	Frankia alni	|	 	|	1859
+1	|	Borreliella afzelii	|	 	|	29518
+1	|	Chelativorans sp.	|	 	|	2203393
+1	|	Shewanella denitrificans	|	 	|	192073
+1	|	Clostridioides difficile	|	 	|	1496
+1	|	Salinibacter ruber	|	 	|	146919
+1	|	Symbiobacterium thermophilum	|	 	|	2734
+1	|	Bartonella quintana	|	 	|	803
+1	|	Bartonella henselae	|	 	|	38323
+1	|	Wolinella succinogenes	|	 	|	844
+1	|	Haemophilus ducreyi	|	[Haemophilus] ducreyi	|	730
+1	|	Yersinia pseudotuberculosis	|	 	|	633
+1	|	Pasteurella multocida	|	 	|	747
+1	|	Clostridium novyi	|	 	|	1542
+1	|	Marinobacter nauticus	|	 	|	2743
+1	|	Polaromonas naphthalenivorans	|	 	|	216465
+1	|	Verminephrobacter eiseniae	|	 	|	364317
+1	|	Shewanella loihica	|	 	|	359303
+1	|	Sulfurovum sp.	|	 	|	1969726
+1	|	Sinorhizobium medicae	|	 	|	110321
+1	|	Lachnoclostridium phytofermentans	|	 	|	66219
+1	|	Renibacterium salmoninarum	|	 	|	1646
+1	|	Finegoldia magna	|	 	|	1260
+1	|	Leuconostoc citreum	|	 	|	33964
+1	|	Mycobacterium marinum	|	 	|	1781
+1	|	Citrifermentans bemidjiense	|	 	|	225194
+1	|	Dictyoglomus thermophilum	|	 	|	14
+1	|	Rhizobium leguminosarum bv. trifolii	|	 	|	386
+1	|	Deinococcus deserti	|	 	|	310783
+1	|	Maridesulfovibrio salexigens	|	 	|	880
+1	|	Chlamydia pneumoniae	|	 	|	83558
+1	|	Levilactobacillus brevis	|	 	|	1580
+1	|	Mycobacterium sp.	|	 	|	1785
+1	|	Rhizobium leguminosarum bv. viciae	|	 	|	387
+1	|	Burkholderia lata	|	 	|	482957
+1	|	Ranunculus macranthus	|	 	|	334596
+1	|	Idiomarina loihiensis	|	 	|	135577
+1	|	Nocardia farcinica	|	 	|	37329
+1	|	Mycoplasma mobile	|	Mesomycoplasma mobile	|	2118
+1	|	Gloeobacter violaceus	|	 	|	33072
+1	|	Chlamydia caviae	|	 	|	83557
+1	|	Buchnera aphidicola subsp. Baizongia pistaciae	|	Buchnera aphidicola str. Bp (Baizongia pistaciae)	|	224915
+2	|	Xanthomonas axonopodis pv. citri	|	Xanthomonas citri	|	346
+1	|	Caldanaerobacter subterraneus subsp. tengcongensis	|	 	|	119072
+1	|	Brucella melitensis	|	 	|	29459
+1	|	Clostridium acetobutylicum	|	 	|	1488
+1	|	Campylobacter fetus subsp. fetus	|	 	|	32019
+1	|	Nocardioides sp.	|	 	|	35761
+1	|	Acidovorax citrulli	|	 	|	80869
+1	|	Caldicellulosiruptor saccharolyticus	|	 	|	44001
+1	|	Clavibacter michiganensis subsp. michiganensis	|	 	|	33013
+1	|	Alkaliphilus metalliredigens	|	 	|	208226
+1	|	Aliarcobacter butzleri	|	 	|	28197
+1	|	Azorhizobium caulinodans	|	 	|	7
+1	|	Shewanella halifaxensis	|	 	|	271098
+1	|	Beijerinckia indica subsp. indica	|	 	|	31994
+1	|	Borrelia hermsii	|	 	|	140
+1	|	Thermosipho africanus	|	 	|	2421
+1	|	Thioalkalivibrio sulfidiphilus	|	 	|	1033854
+1	|	Agrobacterium vitis	|	 	|	373
+1	|	Corynebacterium aurimucosum	|	 	|	169292
+1	|	Bradyrhizobium diazoefficiens	|	 	|	1355477
+1	|	Ruegeria sp.	|	 	|	1879320
+1	|	Cupriavidus metallidurans	|	 	|	119219
+1	|	Novosphingobium aromaticivorans	|	 	|	48935
+1	|	Syntrophus aciditrophicus	|	 	|	316277
+1	|	Rhodospirillum rubrum	|	 	|	1085
+1	|	Borrelia garinii subsp. bavariensis	|	Borreliella garinii subsp. bavariensis	|	664662
+1	|	Leifsonia xyli subsp. xyli	|	 	|	59736
+1	|	Protochlamydia amoebophila	|	Candidatus Protochlamydia amoebophila	|	362787
+1	|	Geobacter sulfurreducens	|	 	|	35554
+1	|	Vibrio parahaemolyticus	|	 	|	670
+1	|	Malacoplasma penetrans	|	 	|	28227
+1	|	Xanthomonas campestris pv. campestris	|	 	|	340
+1	|	Fusobacterium nucleatum subsp. nucleatum	|	 	|	76856
+1	|	Agrobacterium fabrum	|	 	|	1176649
+1	|	Ralstonia solanacearum	|	 	|	305
+1	|	Azoarcus sp.	|	 	|	29544
+1	|	Mycolicibacterium vanbaalenii	|	 	|	110539
+1	|	Polynucleobacter asymbioticus	|	 	|	576611
+1	|	Salinispora tropica	|	 	|	168695
+1	|	Janthinobacterium sp.	|	 	|	1871054
+1	|	Lolium perenne	|	 	|	4522
+1	|	Kocuria rhizophila	|	 	|	72000
+1	|	Nostoc punctiforme	|	 	|	272131
+1	|	Paraburkholderia phytofirmans	|	 	|	261302
+1	|	Erwinia tasmaniensis	|	 	|	338565
+1	|	Proteus mirabilis	|	 	|	584
+1	|	Vibrio atlanticus	|	 	|	693153
+1	|	Shewanella piezotolerans	|	 	|	404011
+1	|	Campylobacter lari	|	 	|	201
+1	|	Nautilia profundicola	|	 	|	244787
+1	|	Acidovorax ebreus	|	[Acidovorax] ebreus	|	721785
+1	|	Caldicellulosiruptor bescii	|	 	|	31899
+1	|	Treponema denticola	|	 	|	158
+1	|	Helicobacter acinonychis	|	 	|	212
+1	|	Jannaschia sp.	|	 	|	1966345
+1	|	Pelagibacter ubique	|	Candidatus Pelagibacter ubique	|	198252
+1	|	Methylococcus capsulatus	|	 	|	414
+1	|	Helicobacter hepaticus	|	 	|	32025
+1	|	Mycoplasmopsis pulmonis	|	 	|	2107
+1	|	Campylobacter jejuni	|	 	|	197
+1	|	Acidothermus cellulolyticus	|	 	|	28049
+1	|	Francisella tularensis subsp. novicida	|	 	|	264
+1	|	Paracoccus denitrificans	|	 	|	266
+1	|	Acidovorax sp.	|	 	|	1872122
+1	|	Mycolicibacterium gilvum	|	 	|	1804
+1	|	Rhizorhabdus wittichii	|	 	|	160791
+1	|	Marinomonas sp.	|	 	|	1904862
+1	|	Campylobacter curvus	|	 	|	200
+1	|	Campylobacter jejuni subsp. doylei	|	 	|	32021
+1	|	Parvibaculum lavamentivorans	|	 	|	256618
+1	|	Vibrio campbellii	|	 	|	680
+1	|	Shewanella pealeana	|	 	|	70864
+1	|	Burkholderia multivorans	|	 	|	87883
+1	|	Delftia acidovorans	|	 	|	80866
+1	|	Methylobacterium sp.	|	 	|	409
+1	|	Histophilus somni	|	 	|	731
+1	|	Leptothrix cholodnii	|	 	|	34029
+1	|	Chlorobium phaeobacteroides	|	 	|	1096
+1	|	Glaesserella parasuis	|	 	|	738
+1	|	Desulfitobacterium hafniense	|	 	|	49338
+1	|	Solidesulfovibrio magneticus	|	 	|	184917
+1	|	Variovorax paradoxus	|	 	|	34073
+1	|	Solibacter usitatus	|	Candidatus Solibacter usitatus	|	332163
+1	|	Lactobacillus gasseri	|	 	|	1596
+1	|	Brucella abortus biovar 1	|	Brucella abortus bv. 1	|	35802
+1	|	Francisella tularensis subsp. holarctica	|	 	|	119857
+1	|	Hyphomonas neptunium	|	 	|	81032
+1	|	Koribacter versatilis	|	Candidatus Koribacter versatilis	|	658062
+1	|	Streptococcus pyogenes serotype M2	|	 	|	404330
+1	|	Streptococcus pyogenes serotype M12	|	 	|	342023
+1	|	Nitrobacter hamburgensis	|	 	|	912
+1	|	Neorickettsia sennetsu	|	 	|	951
+1	|	Sulfurimonas denitrificans	|	 	|	39766
+1	|	Hydrogenovibrio crunogenus	|	 	|	39765
+1	|	Carboxydothermus hydrogenoformans	|	 	|	129958
+1	|	Chlamydia trachomatis	|	 	|	813
+1	|	Trichormus variabilis	|	 	|	264691
+1	|	Nitrobacter winogradskyi	|	 	|	913
+1	|	Dechloromonas aromatica	|	 	|	259537
+1	|	Dichelobacter nodosus	|	 	|	870
+1	|	Thermosipho melanesiensis	|	 	|	46541
+1	|	Campylobacter jejuni	|	 	|	197
+1	|	Thermoanaerobacter sp.	|	 	|	1755
+1	|	Clavibacter michiganensis subsp. sepedonicus	|	 	|	31964
+1	|	Caulobacter sp.	|	 	|	78
+1	|	Methylorubrum populi	|	 	|	223967
+1	|	Cellvibrio japonicus	|	 	|	155077
+1	|	Streptococcus pneumoniae	|	 	|	1313
+2	|	Salmonella choleraesuis	|	Salmonella enterica	|	28901
+1	|	Geobacter sp.	|	 	|	46610
+1	|	Granulibacter bethesdensis	|	 	|	364410
+1	|	Rubrobacter xylanophilus	|	 	|	49319
+1	|	Lawsonia intracellularis	|	 	|	29546
+1	|	Chlamydia felis	|	 	|	83556
+1	|	Geobacter metallireducens	|	 	|	28232
+1	|	Syntrophotalea carbinolica	|	 	|	19
+2	|	Xanthomonas campestris pv. vesicatoria	|	Xanthomonas euvesicatoria	|	456327
+1	|	Thermobifida fusca	|	 	|	2021
+1	|	Gluconobacter oxydans	|	 	|	442
+2	|	Wigglesworthia glossinidia brevipalpis	|	Wigglesworthia glossinidia endosymbiont of Glossina brevipalpis	|	36870
+1	|	Mycobacterium avium	|	 	|	1764
+1	|	Geotalea uraniireducens	|	 	|	351604
+1	|	Shewanella sediminis	|	 	|	271097
+1	|	Francisella tularensis subsp. mediasiatica	|	 	|	135248
+1	|	Methylocella silvestris	|	 	|	199596
+1	|	Rhodococcus erythropolis	|	 	|	1833
+1	|	Porphyromonas gingivalis	|	 	|	837
+2	|	Haemophilus somnus	|	Histophilus somni	|	731
+1	|	Burkholderia thailandensis	|	 	|	57975
+1	|	Cupriavidus pinatubonensis	|	 	|	248026
+1	|	Chlamydia abortus	|	 	|	83555
+1	|	Magnetococcus marinus	|	 	|	1124597
+1	|	Bifidobacterium adolescentis	|	 	|	1680
+1	|	Shewanella putrefaciens	|	 	|	24
+1	|	Burkholderia vietnamiensis	|	 	|	60552
+1	|	Methylobacterium radiotolerans	|	 	|	31998
+1	|	Desulfovibrio desulfuricans	|	 	|	876
+1	|	Polaromonas sp.	|	 	|	1869339
+1	|	Ruegeria pomeroyi	|	 	|	89184
+1	|	Magnetospirillum magneticum	|	 	|	84159
+1	|	Ehrlichia ruminantium	|	 	|	779
+2	|	ferret	|	Mustela putorius furo	|	9669
+2	|	starfish	|	Asteroidea	|	7588
+1	|	Severe acute respiratory syndrome coronavirus	|	 	|	2901879
+2	|	Streptococcus agalactiae serotype V	|	Streptococcus agalactiae serogroup V	|	216466
+1	|	Staphylococcus xylosus	|	 	|	1288
+2	|	Bacillus thuringiensis subsp. israelensis	|	Bacillus thuringiensis serovar israelensis	|	1430
+1	|	Pteronotus parnellii	|	 	|	59476
+1	|	Banzi virus	|	 	|	38837
+1	|	Edge Hill virus	|	 	|	64296
+1	|	Ricinus communis	|	 	|	3988
+1	|	Capra hircus aegagrus	|	Capra aegagrus	|	9923
+1	|	Papio sp.	|	 	|	61183
+1	|	Lactiplantibacillus pentosus	|	 	|	1589
+1	|	Tick-borne encephalitis virus	|	 	|	11084
+1	|	Tick-borne virus	|	Thogotovirus dhoriense	|	11318
+1	|	Ilheus virus	|	 	|	59563
+1	|	Flaveria brownii	|	 	|	33111
+1	|	Eidolon helvum	|	 	|	77214
+1	|	Thermus caldophilus	|	 	|	272
+1	|	Human papillomavirus type 18	|	human papillomavirus 18	|	333761
+1	|	Langat virus	|	 	|	11085
+1	|	Flaveria bidentis	|	 	|	4224
+1	|	Omsk hemorrhagic fever virus	|	 	|	12542
+1	|	Barley stripe mosaic virus	|	 	|	12327
+1	|	Gallid herpesvirus 2	|	Gallid alphaherpesvirus 2	|	10390
+1	|	Acipenser gueldenstaedtii	|	 	|	7902
+1	|	Murray valley encephalitis virus	|	Murray Valley encephalitis virus	|	11079
+1	|	Tick-borne encephalitis virus	|	 	|	11084
+1	|	St. louis encephalitis virus	|	Saint Louis encephalitis virus	|	11080
+1	|	Rhinopithecus roxellana	|	 	|	61622
+1	|	Hippoglossus hippoglossus	|	 	|	8267
+1	|	Rocio virus	|	 	|	64315
+1	|	Kokobera virus	|	 	|	44024
+1	|	Microtus fortis	|	 	|	100897
+1	|	Thermostichus vulcanus	|	 	|	32053
+1	|	Kyasanur forest disease virus	|	Kyasanur Forest disease virus	|	33743
+1	|	Papio hamadryas ursinus	|	Papio ursinus	|	36229
+1	|	Human adenovirus 2	|	 	|	10515
+1	|	Kunjin virus	|	 	|	11077
+1	|	Tick-borne encephalitis virus	|	 	|	11084
+1	|	murine leukemia virus	|	Murine leukemia virus	|	11786
+1	|	Bussuquara virus	|	 	|	64304
+1	|	Zhangixalus schlegelii	|	 	|	210202
+1	|	Eumetopias jubatus	|	 	|	34886
+1	|	Alkhumra hemorrhagic fever virus	|	 	|	172148
+1	|	Wesselsbron virus	|	 	|	164416
+1	|	Candida tropicalis	|	 	|	5482
+1	|	Louping ill virus	|	 	|	11086
+1	|	Clostridium symbiosum	|	[Clostridium] symbiosum	|	1512
+1	|	Tupaia tana	|	 	|	70687
+1	|	Alouatta sara	|	 	|	121123
+1	|	Usutu virus	|	 	|	64286
+1	|	Penaeus vannamei	|	 	|	6689
+1	|	Yersinia pestis	|	 	|	632
+1	|	Phascolarctos cinereus	|	 	|	38626
+1	|	Rhodotorula glutinis	|	 	|	5535
+1	|	Patiria pectinifera	|	 	|	7594
+1	|	Talaromyces funiculosus	|	 	|	28572
+2	|	Salmonella agona	|	Salmonella enterica subsp. enterica serovar Agona	|	58095
+2	|	Salmonella paratyphi B	|	Salmonella enterica subsp. enterica serovar Paratyphi B	|	57045
+1	|	Escherichia coli	|	 	|	562
+1	|	Avian leukosis virus	|	 	|	11864
+1	|	Asterias rubens	|	 	|	7604
+1	|	Erethizon dorsatum	|	 	|	34844
+1	|	Hydrochoerus hydrochaeris	|	 	|	10149
+1	|	Human coronavirus 229E	|	 	|	11137
+1	|	Polybia paulista	|	 	|	291283
+1	|	Escherichia coli	|	 	|	562
+1	|	Ciona intestinalis	|	 	|	7719
+1	|	Human coronavirus NL63	|	 	|	277944
+1	|	Thermostichus lividus	|	 	|	33070
+1	|	Halocynthia roretzi	|	 	|	7729
+1	|	Hevea brasiliensis	|	 	|	3981
+1	|	Salmonella schwarzengrund	|	Salmonella enterica subsp. enterica serovar Schwarzengrund	|	340190
+1	|	Komagataella phaffii	|	 	|	460519
+1	|	Branchiostoma lanceolatum	|	 	|	7740
+1	|	Amaranthus hybridus	|	 	|	3565
+1	|	Ctenomys sociabilis	|	 	|	43321
+1	|	Dinomys branickii	|	 	|	108858
+1	|	Thryonomys swinderianus	|	 	|	10169
+1	|	Tympanoctomys barrerae	|	 	|	61882
+2	|	Chlorella ellipsoidea	|	Pseudochlorella pringsheimii	|	3072
+1	|	Androctonus australis	|	 	|	6858
+1	|	Selaginella uncinata	|	 	|	307165
+1	|	Escherichia coli	|	 	|	562
+1	|	Cabbage leaf curl virus	|	 	|	51336
+1	|	Aneura mirabilis	|	 	|	280810
+2	|	Salmonella newport	|	Salmonella enterica subsp. enterica serovar Newport	|	108619
+1	|	Crocodylus niloticus	|	 	|	8501
+1	|	Cavia tschudii	|	 	|	143287
+1	|	AKT8 murine leukemia virus	|	 	|	11790
+2	|	Davidiella tassiana	|	Cladosporium herbarum	|	29918
+1	|	Human herpesvirus 6A	|	Human betaherpesvirus 6A	|	32603
+1	|	Mortierella alpina	|	 	|	64518
+1	|	Dumortiera hirsuta	|	 	|	56917
+1	|	Ateline herpesvirus 3	|	Ateline gammaherpesvirus 3	|	85618
+1	|	Chlamydia trachomatis	|	 	|	813
+1	|	Agrostis stolonifera	|	 	|	63632
+2	|	Salmonella dublin	|	Salmonella enterica subsp. enterica serovar Dublin	|	98360
+1	|	Dicentrarchus labrax	|	 	|	13489
+1	|	Sipunculus nudus	|	 	|	6446
+1	|	Arctocephalus gazella	|	 	|	37190
+1	|	Dolichotis patagonum	|	 	|	29091
+1	|	Bolinus brandaris	|	 	|	179646
+1	|	Apium graveolens	|	 	|	4045
+1	|	Tomato mottle virus	|	 	|	10835
+1	|	Macaca thibetana	|	 	|	54602
+1	|	Conocephalum japonicum	|	 	|	134427
+2	|	Salmonella heidelberg	|	Salmonella enterica subsp. enterica serovar Heidelberg	|	611
+1	|	Escherichia coli	|	 	|	562
+1	|	Kirsten murine sarcoma virus	|	 	|	11808
+1	|	Odocoileus virginianus papillomavirus 1	|	 	|	2772504
+1	|	Dasyprocta punctata	|	 	|	34846
+1	|	Mastomys coucha	|	 	|	35658
+1	|	Rattus rattus	|	 	|	10117
+1	|	Thermus aquaticus	|	 	|	271
+1	|	Vicia faba	|	 	|	3906
+1	|	Ogataea pini	|	 	|	4923
+1	|	Landoltia punctata	|	 	|	50518
+1	|	Colwellia maris	|	 	|	77524
+1	|	Bubalus carabanensis	|	 	|	346063
+1	|	Lithobates catesbeianus	|	 	|	8400
+1	|	Conocephalum conicum	|	 	|	41839
+1	|	Microtus montanus	|	 	|	88450
+1	|	Paenarthrobacter aurescens	|	 	|	43663
+1	|	Streptococcus pyogenes serotype M6	|	 	|	301450
+1	|	Brucella anthropi	|	 	|	529
+1	|	Anaeromyxobacter sp.	|	 	|	1872521
+1	|	Drosophila auraria	|	 	|	47315
+1	|	Cerdocyon thous	|	 	|	9620
+1	|	Lycalopex vetulus	|	 	|	68734
+1	|	Aphanothece halophytica	|	 	|	72020
+1	|	Avian reticuloendotheliosis virus	|	Reticuloendotheliosis virus	|	11636
+1	|	Vespa velutina	|	 	|	202808
+1	|	Paracentrotus lividus	|	 	|	7656
+1	|	Human herpesvirus 5 strain Towne	|	 	|	10363
+1	|	Avian retrovirus RPL30	|	 	|	31671
+1	|	Human adenovirus D	|	Human mastadenovirus D	|	130310
+1	|	Trieres chinensis	|	 	|	1514140
+1	|	Scenedesmus	|	 	|	3087
+1	|	Canis lupus	|	 	|	9612
+1	|	Equus quagga burchellii	|	 	|	89252
+1	|	Pisaster ochraceus	|	 	|	7612
+1	|	Bigelowiella natans	|	 	|	227086
+1	|	Bat coronavirus 512/2005	|	Scotophilus bat coronavirus 512	|	693999
+1	|	Pecari tajacu	|	 	|	9829
+1	|	Solanum bulbocastanum	|	 	|	147425
+1	|	Methanosphaera stadtmanae	|	 	|	2317
+1	|	Nicotiana sylvestris	|	 	|	4096
+1	|	Perognathus flavus	|	 	|	37443
+1	|	Rousettus leschenaultii	|	 	|	9408
+1	|	Praomys tullbergi	|	 	|	209869
+1	|	Micaelamys namaquensis	|	 	|	472707
+2	|	Streptococcus agalactiae serotype III	|	Streptococcus agalactiae serogroup III	|	216495
+1	|	Acorus americanus	|	 	|	263995
+1	|	Pediococcus acidilactici	|	 	|	1254
+1	|	Human papillomavirus type 48	|	 	|	40538
+1	|	Sigmodon hispidus	|	 	|	42415
+1	|	Sulfurisphaera tokodaii	|	 	|	111955
+1	|	Campylobacter jejuni	|	 	|	197
+1	|	Methanococcus vannielii	|	 	|	2187
+1	|	Dinoroseobacter shibae	|	 	|	215813
+1	|	Coprinopsis cinerea	|	 	|	5346
+1	|	Manihot esculenta	|	 	|	3983
+1	|	Taeniopygia guttata	|	 	|	59729
+1	|	Gloeothece citriformis	|	 	|	2546356
+1	|	Esox lucius	|	 	|	8010
+1	|	Methanothermobacter thermautotrophicus	|	 	|	145262
+1	|	Canis adustus	|	 	|	68723
+1	|	Nyctereutes procyonoides	|	 	|	34880
+1	|	Vulpes macrotis	|	 	|	9630
+1	|	Panthera tigris tigris	|	 	|	74535
+1	|	Guillardia theta	|	 	|	55529
+1	|	Streptococcus pyogenes serotype M4	|	 	|	404331
+1	|	Lemna gibba	|	 	|	4470
+1	|	Silene latifolia subsp. alba	|	 	|	52853
+1	|	Human adenovirus B	|	Human mastadenovirus B	|	108098
+1	|	Human adenovirus B	|	Human mastadenovirus B	|	108098
+1	|	Leontocebus nigricollis	|	 	|	9489
+1	|	Solea senegalensis	|	 	|	28829
+1	|	Platanus occidentalis	|	 	|	4403
+1	|	Sphingopyxis alaskensis	|	 	|	117207
+1	|	Maxomys surifer	|	 	|	69081
+1	|	Hybomys univittatus	|	 	|	71162
+1	|	Dugong dugon	|	 	|	29137
+1	|	Methanosarcina barkeri	|	 	|	2208
+1	|	Porcine adenovirus B	|	Porcine mastadenovirus B	|	130370
+1	|	Human papillomavirus 66	|	human papillomavirus 66	|	37119
+1	|	Abies alba	|	 	|	45372
+1	|	Methanosarcina acetivorans	|	 	|	2214
+1	|	Trichinella pseudospiralis	|	 	|	6337
+1	|	Sorex unguiculatus	|	 	|	62275
+1	|	Pyrococcus abyssi	|	 	|	29292
+1	|	Capsicum annuum	|	 	|	4072
+1	|	Eulemur macaco	|	 	|	30602
+1	|	Methanobrevibacter smithii	|	 	|	2173
+1	|	Methanococcus aeolicus	|	 	|	42879
+1	|	Pseudothermotoga lettingae	|	 	|	177758
+1	|	Laccaria bicolor	|	 	|	29883
+1	|	Trachelium caeruleum	|	 	|	28494
+1	|	Aliivibrio salmonicida	|	 	|	40269
+2	|	Agrobacterium radiobacter	|	Agrobacterium tumefaciens	|	358
+1	|	Kosmotoga olearia	|	 	|	651457
+1	|	Cuon alpinus	|	 	|	68730
+1	|	Urocyon cinereoargenteus	|	 	|	55040
+1	|	Escherichia phage T7	|	 	|	10760
+1	|	Acinonyx jubatus	|	 	|	32536
+1	|	Mirounga angustirostris	|	 	|	9716
+1	|	Platynereis dumerilii	|	 	|	6359
+1	|	Acropora formosa	|	 	|	126732
+1	|	Urechis caupo	|	 	|	6431
+1	|	Fowl adenovirus C	|	Fowl aviadenovirus C	|	190063
+1	|	Alternaria alternata	|	 	|	5599
+1	|	Bubalus depressicornis	|	 	|	27596
+1	|	Human papillomavirus type 70	|	 	|	39457
+1	|	Saguinus midas	|	 	|	30586
+1	|	Bos javanicus	|	 	|	9906
+1	|	Methanocella arvoryzae	|	 	|	1175445
+1	|	Dacnomys millardi	|	 	|	332664
+1	|	Conilurus penicillatus	|	 	|	10127
+1	|	Bat coronavirus HKU3	|	Bat SARS coronavirus HKU3	|	442736
+1	|	Streptomyces collinus	|	 	|	42684
+1	|	Spirogyra maxima	|	 	|	3180
+1	|	Selenomonas ruminantium	|	 	|	971
+1	|	Nycticebus pygmaeus	|	Xanthonycticebus pygmaeus	|	101278
+1	|	Human papillomavirus 69	|	human papillomavirus 69	|	37121
+1	|	Trittame loki	|	 	|	1295018
+1	|	Fervidobacterium nodosum	|	 	|	2424
+1	|	Alkaliphilus oremlandii	|	 	|	461876
+1	|	Malassezia globosa	|	 	|	76773
+1	|	Crocosphaera subtropica	|	 	|	2546360
+1	|	Poeciliopsis lucida	|	 	|	56613
+1	|	Canis aureus	|	 	|	68724
+1	|	Canis mesomelas elongae	|	 	|	69045
+1	|	Lycalopex culpaeus	|	 	|	68736
+1	|	Speothos venaticus	|	 	|	68741
+1	|	Pyrococcus horikoshii	|	 	|	53953
+1	|	UR2 sarcoma virus	|	 	|	354090
+1	|	Tamandua mexicana	|	 	|	9351
+1	|	Bos taurus papillomavirus 4	|	 	|	10562
+1	|	Stenella coeruleoalba	|	 	|	9737
+1	|	Blastocladiella emersonii	|	 	|	4808
+1	|	Human papillomavirus 45	|	human papillomavirus 45	|	10593
+1	|	Cyanophora paradoxa	|	 	|	2762
+1	|	Elephantulus rufescens	|	Galegeeska rufescens	|	42151
+1	|	Caldococcus noboribetus	|	 	|	57174
+1	|	Human papillomavirus 30	|	human papillomavirus 30	|	10611
+1	|	Syntrophomonas wolfei subsp. wolfei	|	 	|	370885
+1	|	Bat coronavirus	|	 	|	1508220
+1	|	Rhabdomys pumilio	|	 	|	121573
+1	|	Leopoldamys sabanus	|	 	|	69073
+1	|	Lemniscomys barbarus	|	 	|	54111
+1	|	Arvicanthis somalicus	|	 	|	61157
+1	|	Amaranthus hypochondriacus	|	 	|	28502
+1	|	Tetraodon nigroviridis	|	 	|	99883
+1	|	Ellobius lutescens	|	 	|	39086
+1	|	Bacillus israeli	|	 	|	42189
+1	|	Mucor circinelloides f. lusitanicus	|	Mucor lusitanicus	|	29924
+1	|	Bovine adenovirus 2	|	 	|	114429
+1	|	Streptococcus pyogenes serotype M1	|	 	|	301447
+1	|	Populus deltoides	|	 	|	3696
+1	|	Syntrophobacter fumaroxidans	|	 	|	119484
+1	|	Borrelia turicatae	|	 	|	142
+1	|	Nuphar advena	|	 	|	77108
+1	|	Saccharopolyspora erythraea	|	 	|	1836
+1	|	Petrotoga mobilis	|	 	|	69499
+1	|	Sorangium cellulosum	|	 	|	56
+1	|	Microcystis aeruginosa	|	 	|	1126
+1	|	Oedogonium cardiacum	|	 	|	55995
+1	|	Thermococcus onnurineus	|	 	|	342948
+1	|	Rhodococcus opacus	|	 	|	37919
+1	|	Thermococcus gammatolerans	|	 	|	187878
+1	|	Colletotrichum trifolii	|	 	|	5466
+1	|	Vulpes zerda	|	 	|	68732
+1	|	Lycalopex gymnocercus	|	 	|	425201
+1	|	Lycalopex sechurae	|	 	|	68739
+1	|	Fujinami sarcoma virus	|	 	|	11885
+1	|	Bovine adenovirus B	|	Bovine mastadenovirus B	|	129950
+1	|	Euglena gracilis	|	 	|	3039
+1	|	Chandipura virus	|	 	|	11272
+1	|	Human papillomavirus 39	|	human papillomavirus 39	|	10588
+1	|	Human papillomavirus type 26	|	 	|	333762
+1	|	Sphingobium yanoikuyae	|	 	|	13690
+1	|	Syncerus caffer	|	 	|	9970
+1	|	Galago senegalensis	|	 	|	9465
+1	|	Callorhinus ursinus	|	 	|	34884
+1	|	Canis simensis	|	 	|	32534
+1	|	Heterololigo bleekeri	|	 	|	1423826
+1	|	Rhodococcus jostii	|	 	|	132919
+1	|	Methanococcoides burtonii	|	 	|	29291
+1	|	Frankia casuarinae	|	 	|	106370
+1	|	Mammuthus primigenius	|	 	|	37349
+1	|	Oenomys hypoxanthus	|	 	|	332668
+1	|	Bat coronavirus	|	 	|	1508220
+1	|	Bacillus caldolyticus	|	[Bacillus] caldolyticus	|	1394
+1	|	Bos taurus papillomavirus 6	|	 	|	10563
+1	|	Desulfovibrio vulgaris subsp. vulgaris	|	Desulfovibrio vulgaris	|	881
+1	|	Thermoanaerobacterium saccharolyticum	|	 	|	28896
+1	|	Peanut clump virus	|	 	|	28355
+1	|	Methanosarcina mazei	|	 	|	2209
+1	|	Pyrococcus furiosus	|	 	|	2261
+1	|	Candida maltosa	|	 	|	5479
+1	|	Mycoplasmopsis agalactiae	|	 	|	2110
+1	|	Rickettsia rickettsii	|	 	|	783
+1	|	Frankia sp.	|	 	|	1855
+1	|	Desulfococcus oleovorans	|	Desulfosudis oleivorans	|	181663
+1	|	Notamacropus parma	|	 	|	413582
+1	|	Natranaerobius thermophilus	|	 	|	375929
+1	|	Elusimicrobium minutum	|	 	|	423605
+1	|	Chlorobium limicola	|	 	|	1092
+1	|	Phenylobacterium zucineum	|	 	|	284016
+1	|	Acidithiobacillus ferrooxidans	|	 	|	920
+1	|	Laribacter hongkongensis	|	 	|	168471
+1	|	Rhizobium leguminosarum	|	 	|	384
+1	|	Mannheimia haemolytica	|	 	|	75985
+1	|	Francisella tularensis	|	 	|	263
+1	|	Weizmannia coagulans	|	 	|	1398
+1	|	Erysipelothrix rhusiopathiae	|	 	|	1648
+1	|	Cytophaga hutchinsonii	|	 	|	985
+1	|	Chlamydia trachomatis	|	 	|	813
+1	|	Bacteroides fragilis	|	 	|	817
+2	|	Wolbachia pipientis wMel	|	Wolbachia endosymbiont of Drosophila melanogaster	|	163164
+1	|	Vibrio proteolyticus	|	 	|	671
+1	|	Pseudomonas savastanoi pv. glycinea	|	 	|	318
+1	|	Actinobacillus pleuropneumoniae	|	 	|	715
+1	|	Flavobacterium johnsoniae	|	 	|	986
+1	|	Parabacteroides distasonis	|	 	|	823
+1	|	Escherichia coli	|	 	|	562
+1	|	Leptospira biflexa serovar Patoc	|	 	|	145259
+1	|	Wolbachia pipientis	|	 	|	955
+1	|	Borrelia recurrentis	|	 	|	44449
+1	|	Listeria monocytogenes serotype 4a	|	 	|	2291969
+1	|	Acidobacterium capsulatum	|	 	|	33075
+1	|	Beutenbergia cavernae	|	 	|	84757
+1	|	Treponema pallidum subsp. pallidum	|	 	|	161
+1	|	Avian erythroblastosis virus	|	 	|	11861
+1	|	Leptospira interrogans	|	 	|	173
+1	|	Carsonella ruddii	|	Candidatus Carsonella ruddii	|	114186
+1	|	Chlorobium luteolum	|	Pelodictyon luteolum	|	1100
+1	|	Ehrlichia canis	|	 	|	944
+1	|	Microchaete diplosiphon	|	 	|	1197
+1	|	Streptococcus pyogenes serotype M28	|	 	|	319700
+1	|	Campylobacter jejuni	|	 	|	197
+1	|	Isfahan virus	|	 	|	290008
+1	|	Neisseria subflava	|	 	|	28449
+1	|	Shigella flexneri	|	 	|	623
+1	|	Buchnera aphidicola subsp. Schizaphis graminum	|	Buchnera aphidicola (Schizaphis graminum)	|	98794
+1	|	Methanopyrus kandleri	|	 	|	2320
+1	|	Parageobacillus thermoglucosidasius	|	 	|	1426
+1	|	Human herpesvirus 6B	|	Human betaherpesvirus 6B	|	32604
+1	|	Gramella forsetii	|	Christiangramia forsetii	|	411153
+1	|	Chlorobium phaeovibrioides	|	 	|	1094
+1	|	Flavobacterium psychrophilum	|	 	|	96345
+1	|	Endomicrobium trichonymphae	|	Candidatus Endomicrobium trichonymphae	|	1408204
+1	|	Shewanella woodyi	|	 	|	60961
+1	|	Mycobacteroides abscessus	|	 	|	36809
+1	|	Akkermansia muciniphila	|	 	|	239935
+1	|	Chlorobaculum parvum	|	 	|	274539
+1	|	Pelodictyon phaeoclathratiforme	|	 	|	34090
+1	|	Streptococcus pyogenes serotype M49	|	 	|	301452
+1	|	Ureaplasma urealyticum serovar 10	|	 	|	95664
+1	|	Corynebacterium kroppenstedtii	|	 	|	161879
+1	|	Chinchilla chinchilla	|	 	|	10152
+1	|	Burkholderia cepacia	|	 	|	292
+1	|	Leptospira interrogans	|	 	|	173
+1	|	Aggregatibacter actinomycetemcomitans	|	 	|	714
+1	|	Tityus obscurus	|	 	|	1221240
+1	|	Leptospira borgpetersenii serovar Hardjo-bovis	|	 	|	338217
+1	|	Alkalilimnicola ehrlichii	|	 	|	351052
+1	|	Erythrobacter litoralis	|	 	|	39960
+1	|	Panthera tigris	|	 	|	9694
+2	|	Rhizobium radiobacter	|	Agrobacterium tumefaciens	|	358
+1	|	Wolbachia	|	 	|	953
+1	|	Mycoplasma gallisepticum	|	Mycoplasmoides gallisepticum	|	2096
+1	|	Ureaplasma parvum serovar 3	|	 	|	38504
+1	|	Metamycoplasma hominis	|	 	|	2098
+1	|	Rickettsia akari	|	 	|	786
+1	|	Polynucleobacter necessarius subsp. necessarius	|	Polynucleobacter necessarius	|	576610
+1	|	Methylacidiphilum infernorum	|	 	|	511746
+1	|	Amoebophilus asiaticus	|	Candidatus Amoebophilus asiaticus	|	281120
+1	|	Desulfatibacillum aliphaticivorans	|	 	|	218208
+1	|	Rickettsia africae	|	 	|	35788
+1	|	Paenibacillus polymyxa	|	 	|	1406
+1	|	Spodoptera frugiperda	|	 	|	7108
+1	|	Spisula sachalinensis	|	Pseudocardium sachalinense	|	81899
+1	|	Thermomicrobium roseum	|	 	|	500
+1	|	Piry virus	|	 	|	11274
+1	|	Trichodesmium erythraeum	|	 	|	1206
+1	|	Anaeromyxobacter dehalogenans	|	 	|	161493
+1	|	Chlorobium chlorochromatii	|	 	|	337090
+1	|	Onion yellows phytoplasma	|	 	|	100379
+1	|	Bacteroides thetaiotaomicron	|	 	|	818
+1	|	Streptococcus pyogenes serotype M18	|	 	|	301451
+1	|	Brevibacillus choshinensis	|	 	|	54911
+1	|	Methylovorus	|	 	|	81682
+1	|	Pelotomaculum thermopropionicum	|	 	|	110500
+1	|	Phocaeicola vulgatus	|	 	|	821
+1	|	Sulcia muelleri	|	Candidatus Karelsulcia muelleri	|	336810
+1	|	Nomascus gabriellae	|	 	|	61852
+1	|	Alteromonas mediterranea	|	 	|	314275
+1	|	Prosthecochloris aestuarii	|	 	|	1102
+1	|	Borrelia duttonii	|	 	|	40834
+1	|	Azobacteroides pseudotrichonymphae	|	Candidatus Azobacteroides pseudotrichonymphae	|	511435
+1	|	Wolbachia	|	 	|	953
+1	|	Rickettsia peacockii	|	 	|	47589
+1	|	Rhodopseudomonas sp.	|	 	|	1078
+1	|	Hemicentrotus pulcherrimus	|	 	|	7650
+1	|	Aquifex pyrophilus	|	 	|	2714
+1	|	Vibrio harveyi	|	 	|	669
+1	|	Ginglymostoma cirratum	|	 	|	7801
+1	|	Deinococcus proteolyticus	|	 	|	55148
+1	|	Oenococcus oeni	|	 	|	1247
+1	|	Mycoplasmopsis synoviae	|	 	|	2109
+1	|	Rhodobacter capsulatus	|	 	|	1061
+1	|	Rhodopirellula baltica	|	 	|	265606
+1	|	Chlorobaculum tepidum	|	 	|	1097
+1	|	Fructilactobacillus sanfranciscensis	|	 	|	1625
+1	|	Phoenix dactylifera	|	 	|	42345
+1	|	Prevotella loescheii	|	Hoylesella loescheii	|	840
+1	|	Tetragenococcus halophilus	|	 	|	51669
+1	|	Rhodothermus marinus	|	 	|	29549
+1	|	Megasphaera elsdenii	|	 	|	907
+1	|	Human herpesvirus 5 strain AD169	|	 	|	10360
+1	|	Human herpesvirus 8	|	Human gammaherpesvirus 8	|	37296
