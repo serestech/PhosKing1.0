@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 class CNN_RNN_FFNN(nn.Module):
-    def __init__(self, aa_window, n_input, hidden_linear_1, hidden_linear_2,
+    def __init__(self, aa_window, n_input, hidden_lstm, hidden_linear_1,
                  padding_1=3, padding_2=6, out_channels=48, dropout=0.5, n_output=1):
         super().__init__()
         kernel_1 = padding_1*2 + 1
@@ -19,14 +19,14 @@ class CNN_RNN_FFNN(nn.Module):
 
         self.batchnorm = nn.BatchNorm1d(n_input + 2*out_channels)
 
-        self.rnn = nn.LSTM(input_size=n_input + 2*out_channels, hidden_size=hidden_linear_1,
+        self.rnn = nn.LSTM(input_size=n_input + 2*out_channels, hidden_size=hidden_lstm,
                            batch_first=True, num_layers=2, bidirectional=True, dropout=dropout)
 
         self.aa_window = aa_window
         self.lnn = nn.Sequential(nn.Dropout(p=dropout),
-                                 nn.Linear(hidden_linear_1*2*(aa_window*2+1), hidden_linear_2),
+                                 nn.Linear(hidden_lstm*2*(aa_window*2+1), hidden_linear_1),
                                  nn.ReLU(),
-                                 nn.Linear(hidden_linear_2, n_output),
+                                 nn.Linear(hidden_linear_1, n_output),
                                  nn.Sigmoid())
         
     def forward(self, x_0):

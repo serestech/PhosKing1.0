@@ -14,6 +14,8 @@ data/database_dumps/mmseq_tmp/
 *cd-hit*.out
 *cd-hit*.restart
 *mmseqs*.fasta*
+*kinase_results
+*logs/*.out
 
 # Python shit
 *__pycache__*

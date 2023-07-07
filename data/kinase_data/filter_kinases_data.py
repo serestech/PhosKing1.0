@@ -7,8 +7,8 @@ import sys
 sys.path.append(abspath('../data_utils'))
 from fasta_utils import read_fasta
 
-IN_TSV = abspath('../merged_dbs/merged_db_metadata.tsv')       # TODO: Replace with cleaned up version once the sequence incoherences have been resolved
-IN_FASTA = abspath('../merged_dbs/merged_db_sequences.fasta')  # TODO: Replace with cleaned up version once the sequence incoherences have been resolved
+IN_TSV = abspath('/zhome/52/c/174062/s220260/PhosKing1.0/data/clean_data/features.tsv')
+IN_FASTA = abspath('/zhome/52/c/174062/s220260/PhosKing1.0/data/clean_data/sequences.fasta')
 OUT_DIR = abspath('.')
 
 metadata_out = f'{OUT_DIR}/merged_db_metadata_kinase.tsv'
@@ -25,7 +25,11 @@ for i, line in enumerate(infile_metadata):
     if i == 0:
         outfile_metadata.write(line)
         continue
-    id, pos, aa, kinases, species, kin_species, source = line.strip().split('\t')
+    try:
+        id, pos, aa, kinases, species, source = line.strip().split('\t')
+    except ValueError as err:
+        print(f'{err}. line {i + 1}: "{line}"')
+        
     if kinases == 'NA':
         continue
     outfile_metadata.write(line)

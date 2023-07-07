@@ -8,9 +8,9 @@
 ### -- Select the resources: 1 gpu in exclusive process mode --
 #BSUB -gpu "num=1:mode=exclusive_process"
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
-#BSUB -W 3:00
+#BSUB -W 1:00
 ### -- request system memory --
-#BSUB -R "rusage[mem=300GB]"
+#BSUB -R "rusage[mem=50GB]"
 ### -- set the email address --
 #BSUB -u danyia@dtu.dk
 ### -- send notification at start --
@@ -39,19 +39,51 @@ echo "Working directory: $(pwd)"
 echo "User: $(whoami)"
 echo "Python: $(which python3)"
 
-# This way the command is logged
+fold=9
+
+echo "Doing cross-validation fold $fold"
+
 read -r -d '' cmd << EOM
-python3 /work3/s220260/PhosKing1.0/training/train_model.new.py
- -m /work3/s220260/PhosKing1.0/PhosKing/CNN_RNN.py
- -n CNN_RNN_FFNN
- -a 15,1280,512,1024,3,6,48,0.5,150
- -f /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/homology_reduced/cd-hit_out_2023-05-07_15-20-36.fasta
+python3 /work3/s220260/PhosKing1.0/training/train_model.py
+ -m /zhome/52/c/174062/s220260/PhosKing1.0/PhosKing/CNN_FFNN.py
+ -n CNN_FFNN
+ -a 6,1280,17888,20000,3,6,48,0.5,52
+ -f /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/merged_db_sequences_kinase.fasta
  -ft /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/kinase_metadata.tsv
  -emb /work3/s220260/PhosKing1.0/data/embeddings/embeddings_1280_kinase
- -aaw 15
+ -l CEL
+ -aaw 6
+ -lr 5e-6
+ -w 1e-3
  -md kinase
  -es
- -e 60
+ -e 20
+ -s /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/CV_splits_graphpart/fold_${fold}.csv
+EOM
+
+echo -e "Running command:\n$cmd"
+
+$cmd
+fold=10
+
+echo "Doing cross-validation fold $fold"
+
+read -r -d '' cmd << EOM
+python3 /work3/s220260/PhosKing1.0/training/train_model.py
+ -m /zhome/52/c/174062/s220260/PhosKing1.0/PhosKing/CNN_FFNN.py
+ -n CNN_FFNN
+ -a 6,1280,17888,20000,3,6,48,0.5,52
+ -f /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/merged_db_sequences_kinase.fasta
+ -ft /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/kinase_metadata.tsv
+ -emb /work3/s220260/PhosKing1.0/data/embeddings/embeddings_1280_kinase
+ -l CEL
+ -aaw 6
+ -lr 5e-6
+ -w 1e-3
+ -md kinase
+ -es
+ -e 20
+ -s /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/CV_splits_graphpart/fold_${fold}.csv
 EOM
 
 echo -e "Running command:\n$cmd"

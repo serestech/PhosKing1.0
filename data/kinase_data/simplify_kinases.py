@@ -20,7 +20,7 @@ with open(metadata_file, 'r') as metadata_table:
         
         entry = line.strip().split('\t')
         try:
-            uniprot_id, position, residue, kinases, species, kinase_species, sources = entry
+            uniprot_id, position, residue, kinases, species, sources = entry
         except ValueError:
             print(f'Could not read line {i + 1}: incorrect nummber of fields ({len(entry)}): "{line.strip()}"')
             continue
@@ -54,11 +54,12 @@ for entry in table:
         tree_kinases = kinase_category_mapping[kinase]
         for tree_kinase in tree_kinases.split(','):
             tree_kinase = tree_kinase.strip()
-            if tree_kinase != 'NA':
+            if tree_kinase not in ('NA', ''):
                 kinases_tree_category.add(tree_kinase)
     
-    entry_prefilter = (*entry[:3], ','.join(kinases_tree_category), *entry[5:])
-    table_filtered.append(entry_prefilter)
+    if len(kinases_tree_category) > 0:
+        entry_prefilter = (*entry[:3], ','.join(kinases_tree_category), *entry[5:])
+        table_filtered.append(entry_prefilter)
 
 table = table_filtered
 
@@ -78,6 +79,7 @@ for entry in table:
     if entry[3].strip() == '':
         continue
     kinases = [kinase.strip() for kinase in entry[3].split(',')]
+    kinases_in_entry = set()
     for kinase in kinases:
         categories = kinase.split(' ')
         cumulative_category = ''
@@ -86,23 +88,38 @@ for entry in table:
             cumulative_category = cumulative_category.strip()
             if cumulative_category == '':
                 raise RuntimeError(f'Empty kinases {entry=} {entry[3]=} {kinases=}')
-            kinase_counts[cumulative_category] += 1
+            kinases_in_entry.add(cumulative_category)
+    
+    for kinase in kinases_in_entry:
+        kinase_counts[kinase] += 1
 all_kinases = list(kinase_counts.keys())
 all_kinases.sort(key=lambda kin:kin.lower())
 
-# Generate kinase categories
-DATA_THRESHOLD = 100       # Only categories with more than this will be included in the mapping
-THRESHOLD_EXCEPTIONS = {}  # Categories here will be kept regardless of amount of data points
+# print(*(f'{kin}\t{kinase_counts[kin]}' for kin in all_kinases), sep='\n')
+
+kinases_to_keep = set()
+with open(f'{HERE}/kinases_to_keep.txt', 'r') as kinases_to_keep_file:
+    for line in kinases_to_keep_file:
+        kinases_to_keep.add(line.strip())
+        if line.strip() not in all_kinases:
+            raise RuntimeError(f'Kinase "{line.strip()}" not found in {all_kinases}')
+
 i = 0
 kinase_mapping = {}
 for kinase in all_kinases:
-    if kinase_counts[kinase] >= DATA_THRESHOLD or kinase in THRESHOLD_EXCEPTIONS:
+    keep_kinase = False
+    for kinase_2 in kinases_to_keep:
+        is_pkl_family = kinase_2.startswith('PKL FJ FAM')  # Exception for this family because there's only a single kinase in it
+        if kinase == kinase_2 or (kinase_2.startswith(kinase) and not is_pkl_family):
+            keep_kinase = True
+        
+    if keep_kinase:
         kinase_mapping[kinase] = i
         i += 1
-    # print(kinase, kinase_counts[kinase], sep='\t')
+        print(kinase, kinase_counts[kinase], sep='\t')
 kinase_mapping_rev = {i: kinase for kinase, i in kinase_mapping.items()}    
 
-print(f'{len(kinase_mapping)} categories above threshold {DATA_THRESHOLD} (with exceptions: {", ".join(THRESHOLD_EXCEPTIONS)})', file=sys.stderr)
+print(f'{len(kinase_mapping)} categories', file=sys.stderr)
 
 outfile_contents = f'kinase_mapping = {pformat(kinase_mapping)}\n\nkinase_mapping_reverse = {pformat(kinase_mapping_rev)}\n'
 outfile_path = abspath(f'{HERE}/../../utils/kinase_mapping.py')

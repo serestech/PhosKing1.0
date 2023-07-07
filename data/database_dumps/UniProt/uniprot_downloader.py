@@ -5,6 +5,8 @@ import re
 import datetime as dt
 import time as t 
 
+UNIPROT_API_URL = 'https://rest.uniprot.org/uniprotkb/search'
+
 
 def search_uniprot(query: str = '', fields: list[str] = [], size: int = 5, includeIsoform: bool = False,
                    cursor: str = None, format_: str = 'json', params: dict = None, json_dump: str = None,

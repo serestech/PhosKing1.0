@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-import torch
-import esm
-import pickle
-import sys
-import os
+import sys, os
+print(f'Using python env {sys.executable}')
 import os.path as path
 import argparse
+import torch
+print(f'Using torch version {torch.__version__}')
+import esm
+import pickle
 
 def load_fasta(fasta_file_name):
     seq_data = []
@@ -41,7 +42,7 @@ def compute_embeddings(seq_data, params, output_folder, pickle_prefix='embedding
 
     # By default, embeddings are computed using cuda if available, but stored in cpu for better compatibility
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if verbose: print(f'Using device {device} for computing embeddings...')
+    print(f'Using torch device of type {device.type}{": " + torch.cuda.get_device_name(device) if device.type == "cuda" else ""}')
     device_cpu = torch.device('cpu')
     model = model.to(device)
 
@@ -99,7 +100,6 @@ def compute_embeddings(seq_data, params, output_folder, pickle_prefix='embedding
                 pickle.dump(representations, f)
 
     if verbose: print(f'Processed sequences: {i}  Written files: {n_pick}  Framed sequences: {n_moving}')
-
 
 
 if __name__ == '__main__':
@@ -166,7 +166,7 @@ if __name__ == '__main__':
 
 
     # Read fasta file
-    print('Reading sequences file...',  end=' ')
+    print('Reading sequences file')
     seq_data = load_fasta(fasta_file_name)
     print(f'Found {len(seq_data)} sequences')
 

@@ -40,4 +40,5 @@ echo "Working directory: $(pwd)"
 echo "User: $(whoami)"
 echo "Python: $(which python3)"
 
-python3 /zhome/52/c/174062/s220260/PhosKing1.0/data/embeddings/compute_embeddings.py -i /zhome/52/c/174062/s220260/PhosKing1.0/data/homology_reduced/cd-hit_out_29-04.fasta -o /zhome/52/c/174062/s220260/PhosKing1.0/data/embeddings/embeddings_1280
+python3 /work3/s220260/PhosKing1.0/data/embeddings/compute_embeddings.py -i /work3/s220260/PhosKing1.0/data/homology_reduced/cd-hit_out_29-04.fasta -o /work3/s220260/PhosKing1.0/data/embeddings/embeddings_1280
+python3 /work3/s220260/PhosKing1.0/data/embeddings/compute_embeddings.py -i /zhome/52/c/174062/s220260/PhosKing1.0/data/kinase_data/merged_db_sequences_kinase.fasta -o /work3/s220260/PhosKing1.0/data/embeddings/embeddings_1280_kinase

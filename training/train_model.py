@@ -1,16 +1,18 @@
 #! /usr/bin/env python3
 '''
 Main script for the training loop of protein phosphorylation (& kinase) predictor.
+Right now this is used for kinase only.
 '''
 import argparse
 import sys, os, os.path
 import copy
+from pprint import pformat
 
 parser = argparse.ArgumentParser(prog=os.path.basename(__file__),
                                  description='Train a phosphorilation prediction model with PyTorch using ESM Embeddings')
 
 FILE_PATH = os.path.abspath(__file__)
-FILE_DIR = os.path.dirname(FILE_PATH)
+HERE = os.path.dirname(FILE_PATH)
 
 parser.add_argument('-m', '--model_file', action='store',
                     dest='model_file', required=True,
@@ -22,13 +24,13 @@ parser.add_argument('-md', '--mode', action='store',
                     dest='mode', default='phospho', choices=['phospho', 'kinase'],
                     help='Prediction mode ("phospho" or "kinase")')
 parser.add_argument('-f', '--fasta', action='store', dest='fasta_path',
-                    default=os.path.abspath(f'{FILE_DIR}/../data/database_dumps/temp_seqs.fasta'),
+                    default=os.path.abspath(f'{HERE}/../data/database_dumps/temp_seqs.fasta'),
                     help='Fasta file')
 parser.add_argument('-ft', '--features', action='store', dest='features_path',
-                    default=os.path.abspath(f'{FILE_DIR}/../data/database_dumps/temp_feats.tsv'),
+                    default=os.path.abspath(f'{HERE}/../data/database_dumps/temp_feats.tsv'),
                     help='Features table (matching fasta file)')
 parser.add_argument('-emb', '--embeddings_dir', action='store', dest='embeddings_dir',
-                    default=os.path.abspath(f'{FILE_DIR}/../data/embeddings/embeddings_1280'),
+                    default=os.path.abspath(f'{HERE}/../data/embeddings/embeddings_1280'),
                     help='Folder with embeddings pickles')
 parser.add_argument('-a', '--model_args', action='store',
                     dest='model_args', default='',
@@ -84,6 +86,12 @@ parser.add_argument('-cv', '--cross_validation', action='store_true',
 parser.add_argument('-as', '--auto_save', action='store_true',
                     dest='auto_save',
                     help='Save best model when it is discovered instead of just once at the end')
+parser.add_argument('-s', '--splits', action='store',
+                    dest='splits',
+                    help='Graphpart output file to do the splits')
+parser.add_argument('-ss', '--split_sequences', action='store_true',
+                    dest='split_sequences',
+                    help='Perform the train-test splits based on sequences (as opposed to phosphosites)')
 
 
 args = parser.parse_args()
@@ -96,7 +104,7 @@ from torch import nn
 import torch.optim as optim
 import torch.utils.data as data
 from importlib import import_module
-from dataset import ESM_Embeddings
+from dataset_new import ESM_Embeddings
 from math import sqrt
 from sklearn.model_selection import train_test_split
 import time as t
@@ -204,7 +212,7 @@ def save_model(state_dict, model_type='final', **kwargs):
     with open(f'{out_filename}.info', 'w') as info_file:
         info_file.write('\n'.join(info_contents))
     
-    training_record_file = f'{FILE_DIR}/models/summary_{args.mode}.tsv'
+    training_record_file = f'{HERE}/models/summary_{args.mode}.tsv'
     if not os.path.exists(training_record_file):
         columns = ['Name', 'Model', 'Loss function', 'Optimizer', 'Learning rate',
                    'Batch size', 'Epochs', 'Weight decay', 'Fraction phos', 'aa window',
@@ -262,6 +270,19 @@ def parse_num(num: str):
     '''
     return float(num) if '.' in num else int(num) 
 
+def parse_splits(splits_path: str):
+    with open(splits_path, 'r') as file:
+        lines = [line.strip() for line in file]
+    
+    seq_splits = {}
+    for line in lines[1:]:
+        seq_id, split = line.split('\t')
+        seq_id = seq_id.strip()
+        split = split.strip()
+        seq_splits[seq_id] = split
+    
+    return seq_splits
+
 # Hacky thing to import the model while knowing file and class name at runtime
 model_dir = os.path.dirname(args.model_file)
 sys.path.append(model_dir)
@@ -289,13 +310,73 @@ dataset = ESM_Embeddings(fasta=args.fasta_path,
                          mode=args.mode,
                          verbose=True)
 
-# Train on 80% of the data. Split the other 20% between test and validation
-indices = list(range(len(dataset)))
-train_idx, rest_idx = train_test_split(indices, train_size=0.8, test_size=0.2, shuffle=True)
-test_idx, validation_idx = train_test_split(rest_idx, train_size=0.5, test_size=0.5, shuffle=True)
+if args.splits is None and not args.split_sequences:
+    # Train on 80% of the data. Split the other 20% between test and validation
+    print(f'Assigning train-test splits based on phosphosites')
+    indices = list(range(len(dataset)))
+    train_idx, rest_idx = train_test_split(indices, train_size=0.8, test_size=0.2, shuffle=True)
+    test_idx, validation_idx = train_test_split(rest_idx, train_size=0.5, test_size=0.5, shuffle=True)
+    assert set(train_idx).isdisjoint(set(rest_idx)) and set(test_idx).isdisjoint(set(validation_idx))  # Sanity check
+elif args.splits is None and args.split_sequences:
+    print(f'Assigning train-test splits based on sequences')
+    # Get all sequences
+    sequences = set()
+    for seq_id, _, _ in dataset.data:
+        sequences.add(seq_id)
+
+    # Split sequences with sklearn
+    sequences = list(sequences)
+    train_seqs, rest_seqs = train_test_split(sequences, train_size=0.8, test_size=0.2, shuffle=True)
+    test_seqs, validation_seqs = train_test_split(rest_seqs, train_size=0.5, test_size=0.5, shuffle=True)
+
+    # Make idx subsets
+    train_idx, test_idx, validation_idx = [], [], []
+    train_seqs, test_seqs, validation_seqs = set(train_seqs), set(test_seqs), set(validation_seqs)
+    n_missing = 0
+    for i, (seq_id, _, _) in enumerate(dataset.data):
+        if seq_id in train_seqs:
+            train_idx.append(i)
+        elif seq_id in test_seqs:
+            test_idx.append(i)
+        elif seq_id in validation_seqs:
+            validation_idx.append(i)
+        else:
+            n_missing += 1
+
+    assert set(train_idx).isdisjoint(set(test_idx)) and \
+        set(train_idx).isdisjoint(set(validation_idx)) and \
+        set(test_idx).isdisjoint(set(validation_idx))  # Sanity check
+    print(f'{n_missing} observations missing from cluster splits (of {len(dataset.data)} total observations)') 
+elif args.splits:
+    train_idx, test_idx, validation_idx = [], [], []
+    splits = parse_splits(args.splits)
+    n_missing = 0
+    print(f'Assigning train-test splits based on {args.splits}')
+    for i, (seq_id, _, _) in enumerate(dataset.data):
+        try:
+            split = splits[seq_id]
+        except KeyError:
+            n_missing += 1
+            continue
+        
+        if split == 'train':
+            train_idx.append(i)
+        elif split == 'test':
+            test_idx.append(i)
+        elif split == 'valid':
+            validation_idx.append(i)
+        else:
+            raise RuntimeError(f'Bad split: {split}') 
+    assert set(train_idx).isdisjoint(set(test_idx)) and \
+           set(train_idx).isdisjoint(set(validation_idx)) and \
+           set(test_idx).isdisjoint(set(validation_idx))  # Sanity check
+    print(f'{n_missing} observations missing from cluster splits (of {len(dataset.data)} total observations)')
+else:
+    raise ValueError('No method for data splitting specificied')
+
 print(f'Number of observations:\n   Training {len(train_idx)}  Validation: {len(validation_idx)}  Test: {len(test_idx)}')
 
-assert set(train_idx).isdisjoint(set(rest_idx)) and set(test_idx).isdisjoint(set(validation_idx))  # Sanity check
+# TODO: Show how many train, test, valid observations per-kinase
 
 # Create subsets of the data
 train_dataset = data.Subset(dataset, train_idx)
@@ -307,8 +388,8 @@ train_loader = data.DataLoader(dataset=train_dataset,
                                batch_size=batch_size,
                                shuffle=True)
 val_loader = data.DataLoader(dataset=validation_dataset,
-                               batch_size=batch_size,
-                               shuffle=False)
+                             batch_size=batch_size,
+                             shuffle=False)
 test_loader = data.DataLoader(dataset=test_dataset,
                               batch_size=batch_size,
                               shuffle=False)
@@ -326,14 +407,14 @@ else:
     raise NotImplementedError(f'Didn\'t recognize loss function {args.loss_fn}')
 
 num_epochs = int(args.n_epochs)
-validation_every_steps = 100 if args.mode == 'phospho' else 10
+validation_every_steps = 100
 
 is_training_kinase = args.mode == 'kinase'
 early_stop = args.early_stopping
 
 date = t.strftime("%m_%d_%H_%M_%S", t.localtime())
 model_mode = 'phos' if args.mode == 'phospho' else 'kin'
-out_name = os.path.join(FILE_DIR, 'models', f'{args.model_name}_{date}_{model_mode}')
+out_name = os.path.join(HERE, 'models', f'{args.model_name}_{date}_{model_mode}')
 
 val_auc_best = 0
 val_sens_best = 0
@@ -381,7 +462,11 @@ for epoch in range(num_epochs):
   
         train_acc, train_prec, train_sens, train_spec, train_mcc = perf_scores(predictions, targets)
         if not is_training_kinase:
-            train_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+            try:
+                train_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+            except ValueError:
+                train_auc = None
+
         else:
             avg_auc, median_auc, _ = kinase_auc(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
             train_auc = avg_auc if args.auc_type == 'mean' else median_auc
@@ -390,7 +475,8 @@ for epoch in range(num_epochs):
         train_precs_batch.append(train_prec)
         train_senss_batch.append(train_sens)
         train_specs_batch.append(train_spec)
-        train_aucs_batch.append(train_auc)
+        if train_auc is not None:
+            train_aucs_batch.append(train_auc)
         train_mccs_batch.append(train_mcc)
 
         # Validation time!
@@ -428,7 +514,10 @@ for epoch in range(num_epochs):
                     
                     val_acc, val_prec, val_sens, val_spec, val_mcc = perf_scores(predictions, targets)
                     if not is_training_kinase:
-                        val_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+                        try:
+                            val_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+                        except ValueError:
+                            val_auc = None
                     else:
                         avg_auc, median_auc, _ = kinase_auc(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
                         val_auc = avg_auc if args.auc_type == 'mean' else median_auc
@@ -437,7 +526,8 @@ for epoch in range(num_epochs):
                     val_precs_batch.append(val_prec)
                     val_senss_batch.append(val_sens)
                     val_specs_batch.append(val_spec)
-                    val_aucs_batch.append(val_auc)
+                    if val_auc is not None:
+                        val_aucs_batch.append(val_auc)
                     val_mccs_batch.append(val_mcc)
                     
                 model.train()
@@ -450,10 +540,8 @@ for epoch in range(num_epochs):
             val_mccs.append(sum(val_mccs_batch) / len(val_mccs_batch))
             
             print(f'  Step {step}')
-            print(f'    Training accuracy:      {train_accs[-1]:8.5f}   Training loss:          {train_loss:8.5f}')
-            print(f'    Validation accuracy:    {val_accs[-1]:8.5f}   Validation loss:        {val_loss:8.5f}')
-            print(f'    Training AUC:           {train_aucs[-1]:8.5f}   Training sensitivity:   {train_senss[-1]:8.5f}   Training specificity:   {train_specs[-1]:8.5f}   Training precision:   {train_precs[-1]:8.5f}')
-            print(f'    Validation AUC:         {val_aucs[-1]:8.5f}   Validation sensitivity: {val_senss[-1]:8.5f}   Validation specificity: {val_specs[-1]:8.5f}   Validation precision: {val_precs[-1]:8.5f}')
+            print(f'    Training AUC:   {train_aucs[-1]:8.3f}  Training loss:   {train_loss:8.3f}')
+            print(f'    Validation AUC: {val_aucs[-1]:8.3f}  Validation loss: {val_loss:8.3f}')
 
             # Store best model if early stopping, save it if auto-save
             if early_stop and val_aucs[-1] > val_auc_best:
@@ -494,7 +582,10 @@ for epoch in range(num_epochs):
                             
                             test_acc, test_prec, test_sens, test_spec, test_mcc = perf_scores(predictions, targets)
                             if not is_training_kinase:
-                                test_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+                                try:
+                                    test_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+                                except ValueError:
+                                    test_auc = None
                             else:
                                 avg_auc, median_auc, _ = kinase_auc(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
                                 test_auc = avg_auc if args.auc_type == 'mean' else median_auc
@@ -502,7 +593,8 @@ for epoch in range(num_epochs):
                             test_precs_batch.append(test_prec)
                             test_senss_batch.append(test_sens)
                             test_specs_batch.append(test_spec)
-                            test_aucs_batch.append(test_auc)
+                            if test_auc is not None:
+                                test_aucs_batch.append(test_auc)
                             test_mccs_batch.append(test_mcc)
                                 
                         model.train()
@@ -539,7 +631,10 @@ with torch.no_grad():
 
         val_acc, val_prec, val_sens, val_spec, val_mcc = perf_scores(predictions, targets)
         if not is_training_kinase:
-            val_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+            try:
+                val_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+            except ValueError:
+                val_auc = None
         else:
             avg_auc, median_auc, _ = kinase_auc(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
             val_auc = avg_auc if args.auc_type == 'mean' else median_auc
@@ -547,7 +642,8 @@ with torch.no_grad():
         val_precs_batch.append(val_prec)
         val_senss_batch.append(val_sens)
         val_specs_batch.append(val_spec)
-        val_aucs_batch.append(val_auc)
+        if val_auc is not None:
+            val_aucs_batch.append(val_auc)
         val_mccs_batch.append(val_mcc)
                     
 val_accs.append(sum(val_accs_batch) / len(val_accs_batch))
@@ -572,7 +668,10 @@ with torch.no_grad():
 
         test_acc, test_prec, test_sens, test_spec, test_mcc = perf_scores(predictions, targets)
         if not is_training_kinase:
-            test_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+            try:
+                test_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+            except ValueError:
+                test_auc = None
         else:
             avg_auc, median_auc, _ = kinase_auc(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
             test_auc = avg_auc if args.auc_type == 'mean' else median_auc
@@ -581,8 +680,9 @@ with torch.no_grad():
         test_precs_batch.append(test_prec)
         test_senss_batch.append(test_sens)
         test_specs_batch.append(test_spec)
+        if test_auc is not None:
+            test_aucs_batch.append(test_auc)
         test_mccs_batch.append(test_mcc)
-        test_aucs_batch.append(test_auc)
 
 
 test_acc = sum(test_accs_batch) / len(test_accs_batch)
@@ -599,18 +699,10 @@ save_model(model.state_dict(), model_type='final',
            test_sens=test_sens, test_auc=test_auc, test_mcc=test_mcc,
            epoch=epoch, step=step)
 
-print('Accuracies of the last step:')
-print(f'  Train {train_accs[-1]:8.5f}   Valid {val_accs[-1]:8.5f}   Test {test_acc:8.5f}')
-print('Precisions of the last step:')
-print(f'  Train {train_precs[-1]:8.5f}   Valid {val_precs[-1]:8.5f}   Test {test_prec:8.5f}')
-print('Sensitivities of the last step:')
-print(f'  Train {train_senss[-1]:8.5f}   Valid {val_senss[-1]:8.5f}   Test {test_sens:8.5f}')
-print('Specificities of the last step:')
-print(f'  Train {train_specs[-1]:8.5f}   Valid {val_specs[-1]:8.5f}   Test {test_spec:8.5f}')
+
 print('AUCs of the last step:')
 print(f'  Train {train_aucs[-1]:8.5f}   Valid {val_aucs[-1]:8.5f}   Test {test_auc:8.5f}')
-print('MCCs of the last step:')
-print(f'  Train {train_mccs[-1]:8.5f}   Valid {val_mccs[-1]:8.5f}   Test {test_mcc:8.5f}')
+
 
 # Test and save best model if early stopping (and if not saved during training)
 if early_stop and not args.auto_save:
@@ -621,29 +713,32 @@ if early_stop and not args.auto_save:
     test_specs_batch = []
     test_aucs_batch = []
     test_mccs_batch = []
+    test_kinase_predictions = []
     with torch.no_grad():
         model.eval()
         for inputs, targets in iter(test_loader):
             inputs = inputs.to(device)
             targets = targets.to(device)
             outputs = model(inputs)
+            test_kinase_predictions.append((targets.cpu().detach().numpy(), outputs.cpu().detach().numpy()))
             predictions = torch.round(outputs)
             
             test_acc, test_prec, test_sens, test_spec, test_mcc = perf_scores(predictions, targets)
             if not is_training_kinase:
-                test_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+                try:
+                    test_auc = roc_auc_score(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+                except ValueError:
+                    test_auc = None
             else:
-                avg_auc, median_auc, _ = kinase_auc(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
+                avg_auc, median_auc, kinase_results = kinase_auc(targets.cpu().detach().numpy(), outputs.cpu().detach().numpy())
                 test_auc = avg_auc if args.auc_type == 'mean' else median_auc
             test_accs_batch.append(test_acc)
             test_precs_batch.append(test_prec)
             test_senss_batch.append(test_sens)
             test_specs_batch.append(test_spec)
-            test_aucs_batch.append(test_auc)
+            if test_auc is not None:
+                test_aucs_batch.append(test_auc)
             test_mccs_batch.append(test_mcc)
-                
-        model.train()
-
 
     test_acc_best = sum(test_accs_batch) / len(test_accs_batch)
     test_prec_best = sum(test_precs_batch) / len(test_precs_batch)
@@ -659,15 +754,14 @@ if early_stop and not args.auto_save:
                test_sens=test_sens_best, test_auc=test_auc_best, test_mcc=test_mcc_best,
                epoch=epoch_best, step=step_best)
 
-print('Accuracies of the best run:')
-print(f'  Train {train_acc_best:8.5f}   Valid {val_acc_best:8.5f}   Test {test_acc_best:8.5f}')
-print('Precisions of the best run:')
-print(f'  Train {train_prec_best:8.5f}   Valid {val_prec_best:8.5f}   Test {test_prec_best:8.5f}')
-print('Sensitivities of the best run:')
-print(f'  Train {train_sens_best:8.5f}   Valid {val_sens_best:8.5f}   Test {test_sens_best:8.5f}')
-print('Specificities of the best run:') 
-print(f'  Train {train_spec_best:8.5f}   Valid {val_spec_best:8.5f}   Test {test_spec_best:8.5f}')
-print('AUCs of the best run:')
-print(f'  Train {train_auc_best:8.5f}   Valid {val_auc_best:8.5f}   Test {test_auc_best:8.5f}')
-print('MCCs of the best run:')
-print(f'  Train {train_mcc_best:8.5f}   Valid {val_mcc_best:8.5f}   Test {test_mcc_best:8.5f}')
+    if is_training_kinase:
+        print('Saving kinase test AUC results')
+        _, _, results = kinase_auc(np.vstack([preds[0] for preds in test_kinase_predictions]), 
+                                   np.vstack([preds[1] for preds in test_kinase_predictions]))
+        with open(f'{out_name}.kinase_results', 'w') as kinase_results_file:
+            kinase_results_file.write(pformat(results))
+
+    
+    print('AUCs of the best run:')
+    print(f'  Train {train_auc_best:8.5f}   Valid {val_auc_best:8.5f}   Test {test_auc_best:8.5f}')
+
